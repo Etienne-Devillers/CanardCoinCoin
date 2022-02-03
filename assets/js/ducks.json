@@ -6,77 +6,77 @@
                     "id":"ani001",
                     "title":"Tortue",
                     "description":"Canard en forme de tortue",
-                    "picture":"",
+                    "picture":"./assets/img/Animaux/tortue.png",
                     "price":"12.99"
                 },
                 {
                     "id":"ani002",
                     "title":"Requin",
                     "description":"Canard en forme de requin",
-                    "picture":"",
+                    "picture":"./assets/img/Animaux/requin.png",
                     "price":"12.99"
                 },
                 {
                     "id":"ani003",
                     "title":"Léopard",
                     "description":"Canard avec un motif léopard",
-                    "picture":"",
+                    "picture":"./assets/img/Animaux/leopard.png",
                     "price":"12.99"
                 },
                 {
                     "id":"ani004",
                     "title":"Singe",
                     "description":"Canard en forme de singe",
-                    "picture":"",
+                    "picture":"./assets/img/Animaux/singe.png",
                     "price":"12.99"
                 },
                 {
                     "id":"ani005",
                     "title":"lLapin",
                     "description":"Canard déguisé en lapin",
-                    "picture":"",
+                    "picture":"./assets/img/Animaux/lapin.png",
                     "price":"12.99"
                 },
                 {
                     "id":"ani006",
                     "title":"Hibou",
                     "description":"Canard en forme de Hibou",
-                    "picture":"",
+                    "picture":"./assets/img/Animaux/hibou.png",
                     "price":"12.99"
                 },
                 {
                     "id":"ani007",
                     "title":"Hérisson",
                     "description":"Canard en forme de hérisson",
-                    "picture":"",
+                    "picture":"./assets/img/Animaux/herisson.png",
                     "price":"12.99"
                 },
                 {
                     "id":"ani008",
                     "title":"Flament rose",
                     "description":"Canard en forme de flament rose",
-                    "picture":"",
+                    "picture":"./assets/img/Animaux/flament_rose.png",
                     "price":"12.99"
                 },
                 {
                     "id":"ani009",
                     "title":"Escargot",
                     "description":"Canard en forme d'escargot",
-                    "picture":"",
+                    "picture":"./assets/img/Animaux/escargot.png",
                     "price":"12.99"
                 },
                 {
                     "id":"ani010",
                     "title":"Éléphant",
                     "description":"Canard en forme d'éléphant",
-                    "picture":"",
+                    "picture":"./assets/img/Animaux/elephant.png",
                     "price":"12.99"
                 },
                 {
                     "id":"ani011",
-                    "title":"Cocq",
-                    "description":"Canard en forme de cocq",
-                    "picture":"",
+                    "title":"Coq",
+                    "description":"Canard en forme de coq",
+                    "picture":"./assets/img/Animaux/coq.png",
                     "price":"12.99"
                 },
                 {
