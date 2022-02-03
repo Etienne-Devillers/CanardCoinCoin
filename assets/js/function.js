@@ -6,11 +6,21 @@
 
 //------------------Fonction De supression d'un article
 
-function RemoveItem(product_ID)
+
+function RemoveItem(product_Id)
 
 
 
 //--Fin supression d'un article
+
+//------------------Fonction De retrait d'un article (quantité -1)
+
+
+function RemoveQuantityItem(product_Id)
+
+
+
+//--Fin retrait d'un article (quantité -1)
 
 //------------------Fonction de supression de tout les articles
 
@@ -22,7 +32,7 @@ function removeAllItem()
 //------------------Fonction augmenter la quantité d'un article
 
 
-function addItem(product_ID)
+function addItem(product_Id)
 
 
 //--Fin augmentation de la quantité
@@ -30,7 +40,7 @@ function addItem(product_ID)
 //------------------Fonction calculer la somme pour chaque article
 
 
-function sumItems(product_id, quantity_ID)
+function sumItems(product_Id, quantity_Id)
 
 
 //--Fin Somme d'un article
