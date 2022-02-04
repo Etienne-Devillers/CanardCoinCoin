@@ -1,11 +1,16 @@
+
+/* --------------------Début des boutons de quantité------------------------ */
+
+
 .inputField {
     display: flex;
     margin: 1em 1em;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 5px;
     width: 150px;
     border-radius: 25px;
     align-items: center;
     justify-content: center;
+    height: 35px;
 }
 
 .quantityInput::-webkit-inner-spin-button {
@@ -20,10 +25,11 @@
     font-weight: bold;
     text-align: center;
     border-color: black;
-    border-width: 0 2px 0 2px;
-    color: red;
-    
+    border-width: 0 1px 0 1px;
+    color: black;
+    height: 35px;
 }
+
 
 .quantityModifier {
     font-size: 2em;
@@ -32,9 +38,35 @@
     border-radius: 0 25px 25px 0;
     width: 50px;
     color: red;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.quantityModifier span {
+    margin-bottom: 7px;
 }
 
 .incrementBtn {
     border-radius: 25px 0 0 25px;
+}
+
+
+/* Fin des boutons de quantité */
+
+/* ---------------------Début du bouton d'achat--------------------------- */
+
+.buyBtn {
+margin: 1em 1em;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 5px;
+width: 150px;
+border-radius: 25px;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 35px;
+font-weight: 800;
+color: white;
+background-color: #FF5A5A;
 }
