@@ -103,17 +103,33 @@ function changeDisplay(userChoice) {}
 
 //--Fin changement d'affichage en fonction de la catégorie 
 
+// ---------------------------fonction qui trouve si l'index existe dans le localstorage
+
+let productIndex ;
+function findIndex(dataProductId) {
+    productsBasket.filter((obj, index) => {
+        productIndex = indexObj = obj.product_Id === dataProductId ? index : null;
+        return productIndex;
+    });
+}
+//fonction qui trouve si l'index existe dans le localstorage
+
 //------------------Fonction ajout au panier
 // Avant d'ajouer au panier, il faut déja vérifier si l'item est déjà présent dans le panier, si c'est le cas, ajouter +1 dans product_quantity,
 // sinon ajouter le product_item dans la variable du localstorage Basket.
 
 function addToBasket(dataProductId) {
+    findIndex(dataProductId);
+    if (productIndex == null) {
+        productsBasket.push({
+            'product_Id': dataProductId,
+            'productQuantity': document.querySelector('input[data-productID=' + dataProductId + ']').value
+        })
+    } else {
+        productsBasket[productIndex].productQuantity = parseInt(productsBasket[productIndex].productQuantity) + parseInt(document.querySelector('input[data-productID=' + dataProductId + ']').value);
 
-    productsBasket.push({
-        'product_Id': dataProductId,
-        'productQuantity': document.querySelector('input[data-productID=' + dataProductId + ']').value
-    })
-
+    }
+    console.log(productsBasket)
 }
 //--Fin ajout au panier
 
