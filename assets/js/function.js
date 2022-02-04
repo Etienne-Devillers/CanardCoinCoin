@@ -16,7 +16,11 @@ function RemoveItem(product_Id) {}
 //------------------Fonction De retrait d'un article (quantité -1)
 // verifier qu'en retirant un article on ne tombe pas à 0. si c'est le cas, supprimer l'item
 
+<<<<<<< HEAD
 function RemoveQuantityItem(product_Id){}
+=======
+function RemoveQuantityItem(product_Id) {}
+>>>>>>> origin/incrementButton
 
 
 
@@ -24,7 +28,11 @@ function RemoveQuantityItem(product_Id){}
 
 //------------------Fonction de supression de tout les articles
 
+<<<<<<< HEAD
 function removeAllItem(){}
+=======
+function removeAllItem() {}
+>>>>>>> origin/incrementButton
 
 
 //--Fin supression de tout les articles
@@ -32,7 +40,11 @@ function removeAllItem(){}
 //------------------Fonction augmenter la quantité d'un article
 
 
+<<<<<<< HEAD
 function addItem(product_Id){}
+=======
+function addItem(product_Id) {}
+>>>>>>> origin/incrementButton
 
 
 //--Fin augmentation de la quantité
@@ -40,7 +52,11 @@ function addItem(product_Id){}
 //------------------Fonction calculer la somme pour chaque article
 
 
+<<<<<<< HEAD
 function sumItems(product_Id, quantity_Id){}
+=======
+function sumItems(product_Id, quantity_Id) {}
+>>>>>>> origin/incrementButton
 
 
 //--Fin Somme d'un article
@@ -48,14 +64,22 @@ function sumItems(product_Id, quantity_Id){}
 //------------------Fonction calculer la somme du panier
 
 
+<<<<<<< HEAD
 function sumItemsTotal(){}
+=======
+function sumItemsTotal() {}
+>>>>>>> origin/incrementButton
 
 //--Fin Somme du panier
 
 //------------------Fonction Mise à jour du localStorage
 
 
+<<<<<<< HEAD
 function updateLocalStorage(){}
+=======
+function updateLocalStorage() {}
+>>>>>>> origin/incrementButton
 
 
 //--Fin mise à jour du localStorage
@@ -63,7 +87,7 @@ function updateLocalStorage(){}
 //------------------Fonction Appel du localStorage
 
 
-function getLocalStorage(){}
+function getLocalStorage() {}
 
 
 
@@ -78,7 +102,7 @@ function getLocalStorage(){}
 //------------------Fonction Fetch Initial et stockage dans une variable
 
 
-function fetchAndSaveIt(){}  
+function fetchAndSaveIt() {}
 
 //--Fin Fetch Initial et stockage dans une variable
 
@@ -133,44 +157,67 @@ function changeDisplay(userChoice) {}
 
 //--Fin changement d'affichage en fonction de la catégorie 
 
+// ---------------------------fonction qui trouve si l'index existe dans le localstorage
+
+let productIndex ;
+function findIndex(dataProductId) {
+    productsBasket.filter((obj, index) => {
+        productIndex = indexObj = obj.product_Id === dataProductId ? index : null;
+        return productIndex;
+    });
+}
+//fonction qui trouve si l'index existe dans le localstorage
+
 //------------------Fonction ajout au panier
 // Avant d'ajouer au panier, il faut déja vérifier si l'item est déjà présent dans le panier, si c'est le cas, ajouter +1 dans product_quantity,
 // sinon ajouter le product_item dans la variable du localstorage Basket.
 
-// function addToBasket(card.btn)
+function addToBasket(dataProductId) {
+    findIndex(dataProductId);
+    if (productIndex == null) {
+        productsBasket.push({
+            'product_Id': dataProductId,
+            'productQuantity': document.querySelector('input[data-productID=' + dataProductId + ']').value
+        })
+    } else {
+        productsBasket[productIndex].productQuantity = parseInt(productsBasket[productIndex].productQuantity) + parseInt(document.querySelector('input[data-productID=' + dataProductId + ']').value);
 
-
-
+    }
+    console.log(productsBasket)
+}
 //--Fin ajout au panier
 
 //------------------Fonction Zoom sur image
 // Ouvre une modal avec l'image en plus gros
 
-function modalZoomImg(zoomBtn) {}
+function modalZoomImg(zoomBtn) {
 
 
-
+}
 //--Fin Zoom sur image
 
 //------------------Fonction ouvrir le panier
 //Ouvre la modal du panier
 
-function openBasketModal(basketBtn){}
+function openBasketModal(basketBtn) {}
 
 
 
 //--Fin ouvrir le panier
 // Fonction qui modifie le nombre d'objets pour un achat rapide ++
 
-function incrementValueItem(){}
+function incrementValueItem(dataProductId) {
 
+    document.querySelector('input[data-productID=' + dataProductId + ']').value++
 
+}
 // Fin fonction achat rapide++
 // Fonction qui modifie le nombre d'objets pour un achat rapide --
 
 
 
-function decrementValueItem(){}
+function decrementValueItem(dataProductId) {
+    document.querySelector('input[data-productID=' + dataProductId + ']').value == 1 ? alert('vous ne pouvez pas ajouter aucun objet au panier') : document.querySelector('input[data-productID=' + dataProductId + ']').value--;
 
-
+}
 // Fin fonction achat rapide --
