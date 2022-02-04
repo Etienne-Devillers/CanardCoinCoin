@@ -91,22 +91,26 @@ function createCards(arrayItem) {
     return `
         <div class="col">
             <div class="card overflow-hidden">
-                
-                    <img class="class="card-img-top image" src=" ${arrayItem.picture}" alt="${arrayItem.description}">
+                <img class="class="card-img-top image" src=" ${arrayItem.picture}" alt="${arrayItem.description}">
 
-                    
-                    
-                
                 <div class="card-body">
+                    <div class="buyEl">
 
-                    <div class="testss">
-                        <div class="test"></div>
-                        <div class="test"></div>
+                        <div class="button inputField">
+                                <div class="decrementBtn quantityModifier" data-productId="test"><span>-</span></div>
+                                <input readonly type="number" step="1" max="" value="1" name="quantityItem" class="quantityInput" data-productId="test">
+                                <div class="incrementBtn quantityModifier" data-productId="test"><span>+</span></div>
+                        </div>
+                        
+                        <div class="button">
+                            <button class="buyBtn" data-productId="test">Ajouter</button>
+                        </div>
+
                     </div>
-
                     <h5>${arrayItem.title}</h5>
                     <p>${arrayItem.description}</p>
                 </div>
+
                 <div class="card-footer">
                     <span>${arrayItem.price}</span>
                 </div>
