@@ -1,6 +1,7 @@
-body{
-    background-color: coral;
+body {
+    margin: 0;
 }
+
 .col{
     display: flex;
     flex-wrap: wrap;
@@ -70,9 +71,7 @@ p{
 
 /* .card:hover . {
 } */
-body {
-    margin: 0;
-}
+
 .col {
     padding: 0;
 }
