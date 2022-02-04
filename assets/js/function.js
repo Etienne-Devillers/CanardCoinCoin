@@ -7,7 +7,7 @@
 //------------------Fonction De supression d'un article
 
 
-function RemoveItem(product_Id)
+function RemoveItem(product_Id) {}
 
 
 
@@ -16,7 +16,7 @@ function RemoveItem(product_Id)
 //------------------Fonction De retrait d'un article (quantité -1)
 // verifier qu'en retirant un article on ne tombe pas à 0. si c'est le cas, supprimer l'item
 
-function RemoveQuantityItem(product_Id)
+function RemoveQuantityItem(product_Id) {}
 
 
 
@@ -24,7 +24,7 @@ function RemoveQuantityItem(product_Id)
 
 //------------------Fonction de supression de tout les articles
 
-function removeAllItem()
+function removeAllItem() {}
 
 
 //--Fin supression de tout les articles
@@ -32,7 +32,7 @@ function removeAllItem()
 //------------------Fonction augmenter la quantité d'un article
 
 
-function addItem(product_Id)
+function addItem(product_Id) {}
 
 
 //--Fin augmentation de la quantité
@@ -40,7 +40,7 @@ function addItem(product_Id)
 //------------------Fonction calculer la somme pour chaque article
 
 
-function sumItems(product_Id, quantity_Id)
+function sumItems(product_Id, quantity_Id) {}
 
 
 //--Fin Somme d'un article
@@ -48,14 +48,14 @@ function sumItems(product_Id, quantity_Id)
 //------------------Fonction calculer la somme du panier
 
 
-function sumItemsTotal()
+function sumItemsTotal() {}
 
 //--Fin Somme du panier
 
 //------------------Fonction Mise à jour du localStorage
 
 
-function updateLocalStorage()
+function updateLocalStorage() {}
 
 
 //--Fin mise à jour du localStorage
@@ -63,7 +63,7 @@ function updateLocalStorage()
 //------------------Fonction Appel du localStorage
 
 
-function getLocalStorage()
+function getLocalStorage() {}
 
 
 
@@ -78,14 +78,14 @@ function getLocalStorage()
 //------------------Fonction Fetch Initial et stockage dans une variable
 
 
-function fetchAndSaveIt()  
+function fetchAndSaveIt() {}
 
 //--Fin Fetch Initial et stockage dans une variable
 
 //------------------Fonction Creation des cards
 
 
-function createCards()
+function createCards() {}
 
 
 
@@ -97,7 +97,7 @@ function createCards()
 //------------------Fonction changement d'affichage en fonction de la catégorie 
 
 
-function changeDisplay(userChoice)
+function changeDisplay(userChoice) {}
 
 
 
@@ -107,40 +107,47 @@ function changeDisplay(userChoice)
 // Avant d'ajouer au panier, il faut déja vérifier si l'item est déjà présent dans le panier, si c'est le cas, ajouter +1 dans product_quantity,
 // sinon ajouter le product_item dans la variable du localstorage Basket.
 
-function addToBasket(card.btn)
+function addToBasket(dataProductId) {
 
+    productsBasket.push({
+        'product_Id': dataProductId,
+        'productQuantity': document.querySelector('input[data-productID=' + dataProductId + ']').value
+    })
 
-
+}
 //--Fin ajout au panier
 
 //------------------Fonction Zoom sur image
 // Ouvre une modal avec l'image en plus gros
 
-function modalZoomImg(zoomBtn)
+function modalZoomImg(zoomBtn) {
 
 
-
+}
 //--Fin Zoom sur image
 
 //------------------Fonction ouvrir le panier
 //Ouvre la modal du panier
 
-function openBasketModal(basketBtn)
+function openBasketModal(basketBtn) {}
 
 
 
 //--Fin ouvrir le panier
 // Fonction qui modifie le nombre d'objets pour un achat rapide ++
 
-function incrementValueItem(productId)
+function incrementValueItem(dataProductId) {
 
+    document.querySelector('input[data-productID=' + dataProductId + ']').value++
 
+}
 // Fin fonction achat rapide++
 // Fonction qui modifie le nombre d'objets pour un achat rapide --
 
 
 
-function decrementValueItem()
+function decrementValueItem(dataProductId) {
+    document.querySelector('input[data-productID=' + dataProductId + ']').value == 1 ? alert('vous ne pouvez pas ajouter aucun objet au panier') : document.querySelector('input[data-productID=' + dataProductId + ']').value--;
 
-
+}
 // Fin fonction achat rapide --
