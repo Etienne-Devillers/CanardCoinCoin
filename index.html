@@ -36,20 +36,32 @@
                                 <a class="nav-link" href="#">Sport</a>
                             </div>
                         </div>
+                        <!--Button trigger modal-->
                         <div>
-                            <button class="cartBtn" type="button">
-                            <a class="" href="#">
-                                <img src="assets/img/Icons/cart.png" alt="" class="cartIcons">
-                            </a>
-                            </button>
-                            
+                            <button class="btn cartBtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+                                <img src="assets/img/Icons/cart.png" alt="Panier" class="cartIcons">
+                            </button>                            
                         </div>
+                        <!--Button trigger modal-->
                     </div>
                 </nav>
             </div>
         </div>
     </div>
     <!--NavBar-->
+    <!-- Modal -->
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasBottomLabel">articles</h5>
+        </div>
+        <div class="offcanvas-body">
+            
+        </div>
+        <div class="offcanvas-footer">
+            <button type="button" class="btn orderBtn">Commander</button>
+        </div>
+    </div>
+    <!-- Modal -->
 
     <!------------------------ Fin Section Header ------------------------>
 
