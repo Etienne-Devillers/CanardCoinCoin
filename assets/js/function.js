@@ -16,7 +16,7 @@ function RemoveItem(product_Id)
 //------------------Fonction De retrait d'un article (quantité -1)
 // verifier qu'en retirant un article on ne tombe pas à 0. si c'est le cas, supprimer l'item
 
-function RemoveQuantityItem(product_Id)
+// function RemoveQuantityItem(product_Id)
 
 
 
@@ -24,7 +24,7 @@ function RemoveQuantityItem(product_Id)
 
 //------------------Fonction de supression de tout les articles
 
-function removeAllItem()
+// function removeAllItem()
 
 
 //--Fin supression de tout les articles
@@ -32,7 +32,7 @@ function removeAllItem()
 //------------------Fonction augmenter la quantité d'un article
 
 
-function addItem(product_Id)
+// function addItem(product_Id)
 
 
 //--Fin augmentation de la quantité
@@ -40,7 +40,7 @@ function addItem(product_Id)
 //------------------Fonction calculer la somme pour chaque article
 
 
-function sumItems(product_Id, quantity_Id)
+// function sumItems(product_Id, quantity_Id)
 
 
 //--Fin Somme d'un article
@@ -48,14 +48,14 @@ function sumItems(product_Id, quantity_Id)
 //------------------Fonction calculer la somme du panier
 
 
-function sumItemsTotal()
+// function sumItemsTotal()
 
 //--Fin Somme du panier
 
 //------------------Fonction Mise à jour du localStorage
 
 
-function updateLocalStorage()
+// function updateLocalStorage()
 
 
 //--Fin mise à jour du localStorage
@@ -63,7 +63,7 @@ function updateLocalStorage()
 //------------------Fonction Appel du localStorage
 
 
-function getLocalStorage()
+// function getLocalStorage()
 
 
 
@@ -78,14 +78,33 @@ function getLocalStorage()
 //------------------Fonction Fetch Initial et stockage dans une variable
 
 
-function fetchAndSaveIt()  
+// function fetchAndSaveIt()  
 
 //--Fin Fetch Initial et stockage dans une variable
 
 //------------------Fonction Creation des cards
 
 
-function createCards()
+function createCards(arrayItem) {
+
+
+    return `
+        <div class="col">
+            <div class="card">
+                <img class="image" src=" ${arrayItem.picture}" alt="${arrayItem.description}">
+                <div class="card-body">
+                    <h5>${arrayItem.title}</h5>
+                    <p>${arrayItem.description}</p>
+                </div>
+                <div class="card-footer">
+                    <span>${arrayItem.price}</span>
+                </div>
+            </div>
+        </div>
+        `
+
+
+};
 
 
 
@@ -107,7 +126,7 @@ function changeDisplay(userChoice)
 // Avant d'ajouer au panier, il faut déja vérifier si l'item est déjà présent dans le panier, si c'est le cas, ajouter +1 dans product_quantity,
 // sinon ajouter le product_item dans la variable du localstorage Basket.
 
-function addToBasket(card.btn)
+// function addToBasket(card.btn)
 
 
 
