@@ -30,7 +30,7 @@
                 },
                 {
                     "id":"ani005",
-                    "title":"lLapin",
+                    "title":"Lapin",
                     "description":"Canard déguisé en lapin",
                     "picture":"./assets/img/Animaux/lapin.png",
                     "price":"12.99"
@@ -88,7 +88,7 @@
                     "id":"ani013",
                     "title":"Coccinelle",
                     "description":"Canard en forme de coccinnelle",
-                    "picture":"./assets/img/Animaux/cocinelle.png",
+                    "picture":"./assets/img/Animaux/coccinelle.png",
                     "price":"12.99"
                 },
                 {
