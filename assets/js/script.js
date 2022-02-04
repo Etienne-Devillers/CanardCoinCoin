@@ -13,6 +13,23 @@ fetch("assets/js/ducks.json")
     .then(function (datas) {
 
 var ducksDataBase = datas
-return ducksDataBase
+// return ducksDataBase
 console.log(ducksDataBase);
+
+
+ducksDataBase.animals.forEach(element => {
+    firstRow.innerHTML += createCards(element)
+    
+    
+});
+
+
+
+
+
+
+
+
+
+
     });
