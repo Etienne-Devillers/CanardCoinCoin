@@ -16,7 +16,7 @@ function RemoveItem(product_Id) {}
 //------------------Fonction De retrait d'un article (quantité -1)
 // verifier qu'en retirant un article on ne tombe pas à 0. si c'est le cas, supprimer l'item
 
-// function RemoveQuantityItem(product_Id)
+function RemoveQuantityItem(product_Id){}
 
 
 
@@ -24,7 +24,7 @@ function RemoveItem(product_Id) {}
 
 //------------------Fonction de supression de tout les articles
 
-// function removeAllItem()
+function removeAllItem(){}
 
 
 //--Fin supression de tout les articles
@@ -32,7 +32,7 @@ function RemoveItem(product_Id) {}
 //------------------Fonction augmenter la quantité d'un article
 
 
-// function addItem(product_Id)
+function addItem(product_Id){}
 
 
 //--Fin augmentation de la quantité
@@ -40,7 +40,7 @@ function RemoveItem(product_Id) {}
 //------------------Fonction calculer la somme pour chaque article
 
 
-// function sumItems(product_Id, quantity_Id)
+function sumItems(product_Id, quantity_Id){}
 
 
 //--Fin Somme d'un article
@@ -48,14 +48,14 @@ function RemoveItem(product_Id) {}
 //------------------Fonction calculer la somme du panier
 
 
-// function sumItemsTotal()
+function sumItemsTotal(){}
 
 //--Fin Somme du panier
 
 //------------------Fonction Mise à jour du localStorage
 
 
-// function updateLocalStorage()
+function updateLocalStorage(){}
 
 
 //--Fin mise à jour du localStorage
@@ -63,7 +63,7 @@ function RemoveItem(product_Id) {}
 //------------------Fonction Appel du localStorage
 
 
-// function getLocalStorage()
+function getLocalStorage(){}
 
 
 
@@ -78,25 +78,32 @@ function RemoveItem(product_Id) {}
 //------------------Fonction Fetch Initial et stockage dans une variable
 
 
-// function fetchAndSaveIt()  
+function fetchAndSaveIt(){}  
 
 //--Fin Fetch Initial et stockage dans une variable
 
 //------------------Fonction Creation des cards
 
 
-let createCards = (arrayItem) =>{
+function createCards(arrayItem) {
 
 
     return `
         <div class="col">
-            <div class="card">
-                <img class="image" src=" ${arrayItem.picture}" alt="${arrayItem.description}">
+            <div class="card overflow-hidden">
+                
+                    <img class="class="card-img-top image" src=" ${arrayItem.picture}" alt="${arrayItem.description}">
+                    <div class="testss">
+                        <div class="test"></div>
+                        <div class="test"></div>
+                    </div>
+                    
+                
                 <div class="card-body">
                     <h5>${arrayItem.title}</h5>
                     <p>${arrayItem.description}</p>
                 </div>
-                <div class="card-footer">
+                <div>
                     <span>${arrayItem.price}</span>
                 </div>
             </div>
@@ -135,10 +142,10 @@ function changeDisplay(userChoice) {}
 //------------------Fonction Zoom sur image
 // Ouvre une modal avec l'image en plus gros
 
-function modalZoomImg(zoomBtn){}
+function modalZoomImg(zoomBtn) {}
 
 
- 
+
 //--Fin Zoom sur image
 
 //------------------Fonction ouvrir le panier
@@ -151,7 +158,7 @@ function openBasketModal(basketBtn){}
 //--Fin ouvrir le panier
 // Fonction qui modifie le nombre d'objets pour un achat rapide ++
 
-function incrementValueItem(productId){}
+function incrementValueItem(){}
 
 
 // Fin fonction achat rapide++
