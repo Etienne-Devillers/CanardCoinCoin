@@ -2,7 +2,7 @@ body {
     margin: 0;
 }
 
-.col{
+main .col{
     display: flex;
     flex-wrap: wrap;
 }
@@ -76,17 +76,17 @@ p{
     padding: 0;
 }
 /* NavBar */
-.navbar {
+header .navbar {
     justify-content: center;
     padding: 0.3rem 0.5rem 0.2rem 0.5rem;
     border-bottom: 0.5rem solid #FAFF74;
     box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
 }
-.navbar-brand{
+header .navbar-brand{
     font-family: Arial, Helvetica, sans-serif;
     color: #212529;
 }
-.navbarLogo {
+header .navbarLogo {
     margin: 0;
     width: 2.5rem;
     height: 2.5rem;
@@ -98,47 +98,49 @@ p{
     background-repeat: no-repeat;
     background-position: center;
 }
-.cartIcons{
+header .cartIcons{
     width: 2rem;
     height: auto;
 }
-.navbar-collapse {
+header .navbar-collapse {
     justify-content: center;
 }
-.nav-link {
+
+header .nav-link {
     margin-right: 1rem;
     font-size: 1.1rem;
     color: #FE8F39!important;
 }
 /* NavBar */
 /*Modal*/
-.offcanvas-bottom {
+header .offcanvas-bottom {
     left: unset;
     width: 20rem;
     max-width: 100%;
     height: 25rem;
 }
-.offcanvas-header {
+header .offcanvas-header {
     justify-content: end;
 }
-.offcanvas-footer {
+header .offcanvas-footer {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1rem 1rem;
 }
+header .orderBtn {
+    color: white;
+    background-color: #FF5A5A;
+    border-radius: 20px;
+}
 /*Modal*/
 /* Footer */
-.footer {
+footer .footer {
+    background-color: white;
     justify-content: center;
     padding: 0.4rem;
     border-top: 0.5rem solid #FAFF74;
     box-shadow: 0 -0.1rem 1rem rgba(0, 0, 0, 0.2);
-}
-.orderBtn {
-    color: white;
-    background-color: #FF5A5A;
-    border-radius: 20px;
 }
 /* Footer */
 
