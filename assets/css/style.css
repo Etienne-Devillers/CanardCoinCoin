@@ -111,11 +111,33 @@ p{
     color: #FE8F39!important;
 }
 /* NavBar */
+/*Modal*/
+.offcanvas-bottom {
+    left: unset;
+    width: 20rem;
+    max-width: 100%;
+    height: 25rem;
+}
+.offcanvas-header {
+    justify-content: end;
+}
+.offcanvas-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+}
+/*Modal*/
 /* Footer */
 .footer {
     justify-content: center;
     padding: 0.4rem;
     border-top: 0.5rem solid #FAFF74;
     box-shadow: 0 -0.1rem 1rem rgba(0, 0, 0, 0.2);
+}
+.orderBtn {
+    color: white;
+    background-color: #FF5A5A;
+    border-radius: 20px;
 }
 /* Footer */
