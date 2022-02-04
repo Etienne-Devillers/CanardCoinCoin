@@ -93,16 +93,6 @@ function createCards() {}
 
 
 
-
-//------------------Fonction changement d'affichage en fonction de la catégorie 
-
-
-function changeDisplay(userChoice) {}
-
-
-
-//--Fin changement d'affichage en fonction de la catégorie 
-
 // ---------------------------fonction qui trouve si l'index existe dans le localstorage
 
 let productIndex ;
@@ -142,14 +132,7 @@ function modalZoomImg(zoomBtn) {
 }
 //--Fin Zoom sur image
 
-//------------------Fonction ouvrir le panier
-//Ouvre la modal du panier
 
-function openBasketModal(basketBtn) {}
-
-
-
-//--Fin ouvrir le panier
 // Fonction qui modifie le nombre d'objets pour un achat rapide ++
 
 function incrementValueItem(dataProductId) {
