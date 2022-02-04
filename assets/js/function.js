@@ -94,17 +94,20 @@ function createCards(arrayItem) {
                 
                     <img class="class="card-img-top image" src=" ${arrayItem.picture}" alt="${arrayItem.description}">
 
+                    
+                    
+                
+                <div class="card-body">
+
                     <div class="testss">
                         <div class="test"></div>
                         <div class="test"></div>
                     </div>
-                    
-                
-                <div class="card-body">
+
                     <h5>${arrayItem.title}</h5>
                     <p>${arrayItem.description}</p>
                 </div>
-                <div>
+                <div class="card-footer">
                     <span>${arrayItem.price}</span>
                 </div>
             </div>
