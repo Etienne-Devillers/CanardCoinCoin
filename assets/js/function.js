@@ -130,4 +130,17 @@ function openBasketModal(basketBtn)
 
 
 //--Fin ouvrir le panier
+// Fonction qui modifie le nombre d'objets pour un achat rapide ++
 
+function incrementValueItem()
+
+
+// Fin fonction achat rapide++
+// Fonction qui modifie le nombre d'objets pour un achat rapide --
+
+
+
+function decrementValueItem()
+
+
+// Fin fonction achat rapide --
