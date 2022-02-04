@@ -1,5 +1,3 @@
-{
-    "goods": [
         {
             "animals": [
                 {
@@ -83,28 +81,28 @@
                     "id":"ani012",
                     "title":"Cochon",
                     "description":"Canard en forme de cochon",
-                    "picture":"",
+                    "picture":"./assets/img/Animaux/cochon.png",
                     "price":"12.99"
                 },
                 {
                     "id":"ani013",
                     "title":"Coccinelle",
                     "description":"Canard en forme de coccinnelle",
-                    "picture":"",
+                    "picture":"./assets/img/Animaux/cocinelle.png",
                     "price":"12.99"
                 },
                 {
                     "id":"ani014",
                     "title":"Chien",
                     "description":"Canard en forme de chien",
-                    "picture":"",
+                    "picture":"./assets/img/Animaux/chien.png",
                     "price":"12.99"
                 },
                 {
                     "id":"ani015",
                     "title":"Âne",
                     "description":"Canard en forme d'âne",
-                    "picture":"",
+                    "picture":"./assets/img/Animaux/ane.png",
                     "price":"12.99"
                 }
             ],
@@ -113,105 +111,105 @@
                     "id":"cel001",
                     "title":"Reine d'Angleterre",
                     "description":"Canard déguisé en Elisabeth II - The best of Queen",
-                    "picture":"",
+                    "picture":"./assets/img/celebrites_personnages/reine_d_angleterre.png",
                     "price":"14.99"
                 },
                 {
                     "id":"cel002",
                     "title":"Mona Lisa",
                     "description":"Canard déguisé en Mona Lisa qui sourit",
-                    "picture":"",
+                    "picture":"./assets/img/celebrites_personnages/mona_lisa.png",
                     "price":"14.99"
                 },
                 {
                     "id":"cel003",
                     "title":"Marilyn Monroe",
                     "description":"Canard déguisé en Marilyn Monroe avec sa robe blanche qui vole",
-                    "picture":"",
+                    "picture":"./assets/img/celebrites_personnages/marilyn.png",
                     "price":"14.99"
                 },
                 {
                     "id":"cel004",
                     "title":"Marie-Antoinette",
                     "description":"Canard déguisé en Marie-Antoinette avec la tête fixe",
-                    "picture":"",
+                    "picture":"./assets/img/celebrites_personnages/marie_antoinette.png",
                     "price":"14.99"
                 },
                 {
                     "id":"cel005",
                     "title":"Elvis Presley",
                     "description":"Canard déguisé en Elvis Presley",
-                    "picture":"",
+                    "picture":"./assets/img/celebrites_personnages/elvis.png",
                     "price":"14.99"
                 },
                 {
                     "id":"cel006",
                     "title":"Elton John",
                     "description":"Canard déguisé en Elton John avec son piano",
-                    "picture":"",
+                    "picture":"./assets/img/celebrites_personnages/elton_john.png",
                     "price":"14.99"
                 },
                 {
                     "id":"cel007",
                     "title":"David Bowie",
                     "description":"Canard déguisé en David Bowie avec les cheveux orange",
-                    "picture":"",
+                    "picture":"./assets/img/celebrites_personnages/david_bowie.png",
                     "price":"14.99"
                 },
                 {
                     "id":"cel008",
                     "title":"Salvador Dalí",
                     "description":"Canard déguisé en Salvador Dalí, sa fameuse moustache et sa 'montre molle'",
-                    "picture":"",
+                    "picture":"./assets/img/celebrites_personnages/dali.png",
                     "price":"14.99"
                 },
                 {
                     "id":"cel009",
                     "title":"Chuck Norris",
                     "description":"Canard déguisé en THE Chuck Norris",
-                    "picture":"",
+                    "picture":"./assets/img/celebrites_personnages/chuck_norris.png",
                     "price":"14.99"
                 },
                 {
                     "id":"cel010",
                     "title":"Donald Trump",
                     "description":"Canard déguisé en Donald Trump avec les cheveux fixe et sa fameuse casquette",
-                    "picture":"",
+                    "picture":"./assets/img/celebrites_personnages/trump.png",
                     "price":"14.99"
                 },
                 {
                     "id":"cel011",
                     "title":"Rosie la riveteuse",
                     "description":"Canard déguisé en Rosie : 'We can do it !'",
-                    "picture":"",
+                    "picture":"./assets/img/celebrites_personnages/riveteuse.png",
                     "price":"14.99"
                 },
                 {
                     "id":"cel012",
                     "title":"Napoléon",
                     "description":"Canard déguisé en Napoléon Bonaparte",
-                    "picture":"",
+                    "picture":"./assets/img/celebrites_personnages/napoleon.png",
                     "price":"14.99"
                 },
                 {
                     "id":"cel013",
                     "title":"Jimi Hendrix",
                     "description":"Canard déguisé en Jimi Hendrix et sa guitare",
-                    "picture":"",
+                    "picture":"./assets/img/celebrites_personnages/jimi_hendrix.png",
                     "price":"14.99"
                 },
                 {
                     "id":"cel014",
                     "title":"Albert Einstein",
                     "description":"Canard déguisé en Albert Einstein : E = mc²",
-                    "picture":"",
+                    "picture":"./assets/img/celebrites_personnages/einstein.png",
                     "price":"14.99"
                 },
                 {
                     "id":"cel015",
                     "title":"Al Capone",
                     "description":"Canard déguisé en Al Capone et son cigare",
-                    "picture":"",
+                    "picture":"./assets/img/celebrites_personnages/al_capone.png",
                     "price":"14.99"
                 }
             ],
@@ -220,105 +218,105 @@
                     "id":"pro001",
                     "title":"Avocat",
                     "description":"Canard déguisé en avocat (le métier et non le fruit !)",
-                    "picture":"",
+                    "picture":"./assets/img/metier/avocat.png",
                     "price":"11.99"
                 },
                 {
                     "id":"pro002",
                     "title":"Barman",
                     "description":"Canard déguisé en barman",
-                    "picture":"",
+                    "picture":"./assets/img/metier/barman.png",
                     "price":"11.99"
                 },
                 {
                     "id":"pro003",
                     "title":"Bricoleur",
                     "description":"Canard déguisé en bricoleur",
-                    "picture":"",
+                    "picture":"./assets/img/metier/bricoleur.png",
                     "price":"11.99"
                 },
                 {
                     "id":"pro004",
                     "title":"Boulanger",
                     "description":"Canard déguisé en boulanger",
-                    "picture":"",
+                    "picture":"./assets/img/metier/boulanger.png",
                     "price":"11.99"
                 },
                 {
                     "id":"pro005",
                     "title":"Chef cuisinier",
                     "description":"Canard déguisé en chef cuisinier",
-                    "picture":"",
+                    "picture":"./assets/img/metier/chef_cuisinier.png",
                     "price":"11.99"
                 },
                 {
                     "id":"pro006",
                     "title":"Déménageur",
                     "description":"Canard déguisé en déménageur",
-                    "picture":"",
+                    "picture":"./assets/img/metier/demenageur.png",
                     "price":"11.99"
                 },
                 {
                     "id":"pro007",
                     "title":"Dentiste",
                     "description":"Canard déguisé en dentiste",
-                    "picture":"",
+                    "picture":"./assets/img/metier/dentiste.png",
                     "price":"11.99"
                 },
                 {
                     "id":"pro008",
                     "title":"Développeur",
                     "description":"Canard déguisé en développeur",
-                    "picture":"",
+                    "picture":"./assets/img/metier/developpeur.png",
                     "price":"11.99"
                 },
                 {
                     "id":"pro009",
                     "title":"Docteur",
                     "description":"Canard déguisé en docteur",
-                    "picture":"",
+                    "picture":"./assets/img/metier/docteur.png",
                     "price":"11.99"
                 },
                 {
                     "id":"pro010",
                     "title":"Hotesse de l'air",
                     "description":"Canard déguisé en hotesse de l'air",
-                    "picture":"",
+                    "picture":"./assets/img/metier/hotesse_de_l_air.png",
                     "price":"11.99"
                 },
                 {
                     "id":"pro011",
                     "title":"Maçon",
                     "description":"Canard déguisé en maçon",
-                    "picture":"",
+                    "picture":"./assets/img/metier/maçon.png",
                     "price":"11.99"
                 },
                 {
                     "id":"pro012",
                     "title":"Pilote",
                     "description":"Canard déguisé en pilote",
-                    "picture":"",
+                    "picture":"./assets/img/metier/pilote.png",
                     "price":"11.99"
                 },
                 {
                     "id":"pro013",
                     "title":"Pizzaïolo",
                     "description":"Canard déguisé en pizzaïolo",
-                    "picture":"",
+                    "picture":"./assets/img/metier/pizzaiolo.png",
                     "price":"11.99"
                 },
                 {
                     "id":"pro014",
                     "title":"Policier",
                     "description":"Canard déguisé en policier",
-                    "picture":"",
+                    "picture":"./assets/img/metier/policier.png",
                     "price":"11.99"
                 },
                 {
                     "id":"pro015",
                     "title":"Pompier",
                     "description":"Canard déguisé en pompier",
-                    "picture":"",
+                    "picture":"./assets/img/metier/pompier.png",
                     "price":"11.99"
                 }
             ],
@@ -327,105 +325,105 @@
                     "id":"fic001",
                     "title":"Batman",
                     "description":"Canard déguisé en Batman",
-                    "picture":"",
+                    "picture":"./assets/img/fiction/batman.png",
                     "price":"14.99"
                 },
                 {
                     "id":"fic002",
                     "title":"Batwoman",
                     "description":"Canard déguisé en Batwoman",
-                    "picture":"",
+                    "picture":"./assets/img/fiction/batwoman.png",
                     "price":"14.99"
                 },
                 {
                     "id":"fic003",
                     "title":"Chewbacca",
                     "description":"Canard déguisé en Chewbacca",
-                    "picture":"",
+                    "picture":"./assets/img/fiction/chebacca.png",
                     "price":"14.99"
                 },
                 {
                     "id":"fic004",
                     "title":"Dark Vador",
                     "description":"Canard déguisé en Dark Vador : 'Je suis ton Père !'",
-                    "picture":"",
+                    "picture":"./assets/img/fiction/dark_vador.png",
                     "price":"14.99"
                 },
                 {
                     "id":"fic005",
                     "title":"Fifi Brindacier",
                     "description":"Canard déguisé en Fifi Brindacier",
-                    "picture":"",
+                    "picture":"./assets/img/fiction/fifi.png",
                     "price":"14.99"
                 },
                 {
                     "id":"fic006",
                     "title":"Frankeistein",
                     "description":"Canard déguisé en Frankeistein",
-                    "picture":"",
+                    "picture":"./assets/img/fiction/frankenstein.png",
                     "price":"14.99"
                 },
                 {
                     "id":"fic007",
                     "title":"Daenerys Targaryen",
                     "description":"Canard déguisé en Daenerys Targaryen de Game of Thrones",
-                    "picture":"",
+                    "picture":"./assets/img/fiction/game_of_thrones.png",
                     "price":"14.99"
                 },
                 {
                     "id":"fic008",
                     "title":"Groot",
                     "description":"'Je s'appelle Groot !'",
-                    "picture":"",
+                    "picture":"./assets/img/fiction/groot.png",
                     "price":"14.99"
                 },
                 {
                     "id":"fic009",
                     "title":"Hulk",
                     "description":"Canard déguisé en Hulk",
-                    "picture":"",
+                    "picture":"./assets/img/fiction/hulk.png",
                     "price":"14.99"
                 },
                 {
                     "id":"fic010",
                     "title":"Iron Man",
                     "description":"Canard déguisé en Iron Man",
-                    "picture":"",
+                    "picture":"./assets/img/fiction/ironman.png",
                     "price":"14.99"
                 },
                 {
                     "id":"fic011",
                     "title":"Matrix",
                     "description":"Canard déguisé en Matrix",
-                    "picture":"",
+                    "picture":"./assets/img/fiction/matrix.png",
                     "price":"14.99"
                 },
                 {
                     "id":"fic012",
                     "title":"Pikachu",
                     "description":"Canard déguisé en Pikachu : 'Pika Pika !'",
-                    "picture":"",
+                    "picture":"./assets/img/fiction/pikachu.png",
                     "price":"14.99"
                 },
                 {
                     "id":"fic013",
                     "title":"Robot",
                     "description":"Canard déguisé en Robot",
-                    "picture":"",
+                    "picture":"./assets/img/fiction/robot.png",
                     "price":"14.99"
                 },
                 {
                     "id":"fic014",
                     "title":"Jack Sparrow",
                     "description":"Canard déguisé en Jack Sparrow",
-                    "picture":"",
+                    "picture":"./assets/img/fiction/pirate_des_caraibes.png",
                     "price":"14.99"
                 },
                 {
                     "id":"fic015",
                     "title":"Spiderman",
                     "description":"Canard déguisé en Spiderman",
-                    "picture":"",
+                    "picture":"./assets/img/fiction/spiderman.png",
                     "price":"14.99"
                 }
             ],
@@ -434,105 +432,105 @@
                     "id":"spo001",
                     "title":"Ballerine",
                     "description":"Canard déguisé en danseuse artistique",
-                    "picture":"",
+                    "picture":"./assets/img/sport/ballerine.png",
                     "price":"11.99"
                 },
                 {
                     "id":"spo002",
                     "title":"Basketeur",
                     "description":"Canard déguisé en joueur de basket avec son ballon",
-                    "picture":"",
+                    "picture":"./assets/img/sport/basketeur.png",
                     "price":"11.99"
                 },
                 {
                     "id":"spo003",
                     "title":"Body bulder",
                     "description":"Canard déguisé en body bulder avec ses altères",
-                    "picture":"",
+                    "picture":"./assets/img/sport/body_builder.png",
                     "price":"11.99"
                 },
                 {
                     "id":"spo004",
                     "title":"Boxeur",
                     "description":"Canard déguisé en boxeur en position de combat",
-                    "picture":"",
+                    "picture":"./assets/img/sport/boxeur.png",
                     "price":"11.99"
                 },
                 {
                     "id":"spo005",
                     "title":"Cycliste",
                     "description":"Canard déguisé en cycliste avec son casuqe et son vélo",
-                    "picture":"",
+                    "picture":"./assets/img/sport/cycliste.png",
                     "price":"11.99"
                 },
                 {
                     "id":"spo006",
                     "title":"Footballeur",
                     "description":"Canard déguisé en footballeur avec son ballon",
-                    "picture":"",
+                    "picture":"./assets/img/sport/footballeur.png",
                     "price":"11.99"
                 },
                 {
                     "id":"spo007",
                     "title":"Golfeur",
                     "description":"Canard déguisé en golfeur avec son club",
-                    "picture":"",
+                    "picture":"./assets/img/sport/golfeur.png",
                     "price":"11.99"
                 },
                 {
                     "id":"spo008",
                     "title":"Joueur de tennis",
                     "description":"Canard déguisé en joueur de tennis avec sa raquette",
-                    "picture":"",
+                    "picture":"./assets/img/sport/joueur_de_tennis.png",
                     "price":"11.99"
                 },
                 {
                     "id":"spo009",
                     "title":"Karatéka",
                     "description":"Cannard déguisé en joueur de karaté",
-                    "picture":"",
+                    "picture":"./assets/img/sport/karateka.png",
                     "price":"11.99"
                 },
                 {
                     "id":"spo010",
                     "title":"Plongeur",
                     "description":"Canard déguisé en plongeur avec son masque et ses palmes",
-                    "picture":"",
+                    "picture":"./assets/img/sport/plongeur.png",
                     "price":"11.99"
                 },
                 {
                     "id":"spo011",
                     "title":"Randonneur",
                     "description":"Canard déguisé en randonneur avec son sac à dos",
-                    "picture":"",
+                    "picture":"./assets/img/sport/randonneur.png",
                     "price":"11.99"
                 },
                 {
                     "id":"spo012",
                     "title":"Skieur alpin",
                     "description":"Canard déguisé en skieur portant ses ski et ses bâtons",
-                    "picture":"",
+                    "picture":"./assets/img/sport/skieur_alpin.png",
                     "price":"11.99"
                 },
                 {
                     "id":"spo013",
                     "title":"Surfeur",
                     "description":"Canard déguisé en surfeur portant sa planche",
-                    "picture":"",
+                    "picture":"./assets/img/sport/surfeur.png",
                     "price":"11.99"
                 },
                 {
                     "id":"spo014",
                     "title":"Toreador",
                     "description":"Canard déguisé en toreador",
-                    "picture":"",
+                    "picture":"./assets/img/sport/toreador.png",
                     "price":"11.99"
                 },
                 {
                     "id":"spo015",
                     "title":"Yogiste",
                     "description":"Canard pratiquant le yoga",
-                    "picture":"",
+                    "picture":"./assets/img/sport/yogiste.png",
                     "price":"11.99"
                 }
             ],
@@ -541,108 +539,106 @@
                     "id":"cla001",
                     "title":"Ange",
                     "description":"Canard déguisé en ange",
-                    "picture":"",
+                    "picture":"./assets/img/classique/ange.png",
                     "price":"9.99"
                 },
                 {
                     "id":"cla002",
                     "title":"Arc-en-ciel",
                     "description":"Canard avec un motif arc-en-ciel",
-                    "picture":"",
+                    "picture":"./assets/img/classique/arc_en_ciel.png",
                     "price":"9.99"
                 },
                 {
                     "id":"cla003",
                     "title":"Bleu couronné",
                     "description":"Canard bleu avec une couronne",
-                    "picture":"",
+                    "picture":"./assets/img/classique/bleu.png",
                     "price":"9.99"
                 },
                 {
                     "id":"cla004",
                     "title":"Jaune couronné",
                     "description":"Canard jaune avec une couronne",
-                    "picture":"",
+                    "picture":"./assets/img/classique/jaune.png",
                     "price":"9.99"
                 },
                 {
                     "id":"cla005",
                     "title":"Amoureux",
                     "description":"Canard avec un tatouage coeur 'love you'",
-                    "picture":"",
+                    "picture":"./assets/img/classique/love_you.png",
                     "price":"9.99"
                 },
                 {
                     "id":"cla006",
                     "title":"Maman et son bébé",
                     "description":"Maman canard et son petit caneton",
-                    "picture":"",
+                    "picture":"./assets/img/classique/maman_et_son_bebe.png",
                     "price":"9.99"
                 },
                 {
                     "id":"cla007",
                     "title":"Noir",
                     "description":"Canard de couleur noire",
-                    "picture":"",
+                    "picture":"./assets/img/classique/noir.png",
                     "price":"9.99"
                 },
                 {
                     "id":"cla008",
                     "title":"Or",
                     "description":"Canard en or : de COULEUR or (seule la couleur est en or !)",
-                    "picture":"",
+                    "picture":"./assets/img/classique/or.png",
                     "price":"9.99"
                 },
                 {
                     "id":"cla009",
                     "title":"Pâcques",
                     "description":"Canard en forme de lapin de pâcques avec son oeuf",
-                    "picture":"",
+                    "picture":"./assets/img/classique/paques.png",
                     "price":"9.99"
                 },
                 {
                     "id":"cla010",
                     "title":"Père Noël",
                     "description":"Canard déguisé en Père Noël (il vous apportera 'peut-être' des jouets par millier si vous êtes sage !)",
-                    "picture":"",
+                    "picture":"./assets/img/classique/pere_noel.png",
                     "price":"9.99"
                 },
                 {
                     "id":"cla011",
                     "title":"Religieuse",
                     "description":"Canard déguisé en religieuse (ce n'est pas un gâteau !)",
-                    "picture":"",
+                    "picture":"./assets/img/classique/religieuse.png",
                     "price":"9.99"
                 },
                 {
                     "id":"cla012",
                     "title":"Rose couronné",
                     "description":"Canard rose avec une couronne",
-                    "picture":"",
+                    "picture":"./assets/img/classique/rose.png",
                     "price":"9.99"
                 },
                 {
                     "id":"cla013",
                     "title":"Trèfle",
                     "description":"Canard vert avec un motif trèfle",
-                    "picture":"",
+                    "picture":"./assets/img/classique/trefle.png",
                     "price":"9.99"
                 },
                 {
                     "id":"cla014",
                     "title":"Vert",
                     "description":"Canard de couleur verte",
-                    "picture":"",
+                    "picture":"./assets/img/classique/vert.png",
                     "price":"9.99"
                 },
                 {
                     "id":"cla015",
                     "title":"Corona",
                     "description":"Canard portant un masque chirurgical",
-                    "picture":"",
+                    "picture":"./assets/img/classique/corona.png",
                     "price":"9.99"
                 }
             ]
         }
-    ]
-}

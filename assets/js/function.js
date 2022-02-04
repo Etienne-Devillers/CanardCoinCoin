@@ -14,7 +14,7 @@ function RemoveItem(product_Id)
 //--Fin supression d'un article
 
 //------------------Fonction De retrait d'un article (quantité -1)
-
+// verifier qu'en retirant un article on ne tombe pas à 0. si c'est le cas, supprimer l'item
 
 function RemoveQuantityItem(product_Id)
 
@@ -78,9 +78,7 @@ function getLocalStorage()
 //------------------Fonction Fetch Initial et stockage dans une variable
 
 
-function fetchAndSaveIt()
-
-
+function fetchAndSaveIt()  
 
 //--Fin Fetch Initial et stockage dans une variable
 
@@ -106,7 +104,8 @@ function changeDisplay(userChoice)
 //--Fin changement d'affichage en fonction de la catégorie 
 
 //------------------Fonction ajout au panier
-
+// Avant d'ajouer au panier, il faut déja vérifier si l'item est déjà présent dans le panier, si c'est le cas, ajouter +1 dans product_quantity,
+// sinon ajouter le product_item dans la variable du localstorage Basket.
 
 function addToBasket(card.btn)
 
@@ -115,7 +114,7 @@ function addToBasket(card.btn)
 //--Fin ajout au panier
 
 //------------------Fonction Zoom sur image
-
+// Ouvre une modal avec l'image en plus gros
 
 function modalZoomImg(zoomBtn)
 
@@ -124,7 +123,7 @@ function modalZoomImg(zoomBtn)
 //--Fin Zoom sur image
 
 //------------------Fonction ouvrir le panier
-
+//Ouvre la modal du panier
 
 function openBasketModal(basketBtn)
 
