@@ -16,11 +16,7 @@ function RemoveItem(product_Id) {}
 //------------------Fonction De retrait d'un article (quantité -1)
 // verifier qu'en retirant un article on ne tombe pas à 0. si c'est le cas, supprimer l'item
 
-<<<<<<< HEAD
-function RemoveQuantityItem(product_Id){}
-=======
 function RemoveQuantityItem(product_Id) {}
->>>>>>> origin/incrementButton
 
 
 
@@ -28,11 +24,7 @@ function RemoveQuantityItem(product_Id) {}
 
 //------------------Fonction de supression de tout les articles
 
-<<<<<<< HEAD
-function removeAllItem(){}
-=======
 function removeAllItem() {}
->>>>>>> origin/incrementButton
 
 
 //--Fin supression de tout les articles
@@ -40,11 +32,7 @@ function removeAllItem() {}
 //------------------Fonction augmenter la quantité d'un article
 
 
-<<<<<<< HEAD
-function addItem(product_Id){}
-=======
 function addItem(product_Id) {}
->>>>>>> origin/incrementButton
 
 
 //--Fin augmentation de la quantité
@@ -52,11 +40,7 @@ function addItem(product_Id) {}
 //------------------Fonction calculer la somme pour chaque article
 
 
-<<<<<<< HEAD
-function sumItems(product_Id, quantity_Id){}
-=======
 function sumItems(product_Id, quantity_Id) {}
->>>>>>> origin/incrementButton
 
 
 //--Fin Somme d'un article
@@ -64,22 +48,14 @@ function sumItems(product_Id, quantity_Id) {}
 //------------------Fonction calculer la somme du panier
 
 
-<<<<<<< HEAD
-function sumItemsTotal(){}
-=======
 function sumItemsTotal() {}
->>>>>>> origin/incrementButton
 
 //--Fin Somme du panier
 
 //------------------Fonction Mise à jour du localStorage
 
 
-<<<<<<< HEAD
-function updateLocalStorage(){}
-=======
 function updateLocalStorage() {}
->>>>>>> origin/incrementButton
 
 
 //--Fin mise à jour du localStorage
