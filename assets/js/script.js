@@ -16,7 +16,6 @@ var ducksDataBase = datas
 // return ducksDataBase
 console.log(ducksDataBase);
 
-
 ducksDataBase.animals.forEach(element => {
     firstRow.innerHTML += createCards(element)
     

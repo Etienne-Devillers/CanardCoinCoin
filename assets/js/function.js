@@ -7,7 +7,7 @@
 //------------------Fonction De supression d'un article
 
 
-function RemoveItem(product_Id)
+function RemoveItem(product_Id) {}
 
 
 
@@ -85,7 +85,7 @@ function RemoveItem(product_Id)
 //------------------Fonction Creation des cards
 
 
-function createCards(arrayItem) {
+let createCards = (arrayItem) =>{
 
 
     return `
@@ -116,7 +116,7 @@ function createCards(arrayItem) {
 //------------------Fonction changement d'affichage en fonction de la catégorie 
 
 
-function changeDisplay(userChoice)
+function changeDisplay(userChoice) {}
 
 
 
@@ -135,23 +135,23 @@ function changeDisplay(userChoice)
 //------------------Fonction Zoom sur image
 // Ouvre une modal avec l'image en plus gros
 
-function modalZoomImg(zoomBtn)
+function modalZoomImg(zoomBtn){}
 
 
-
+ 
 //--Fin Zoom sur image
 
 //------------------Fonction ouvrir le panier
 //Ouvre la modal du panier
 
-function openBasketModal(basketBtn)
+function openBasketModal(basketBtn){}
 
 
 
 //--Fin ouvrir le panier
 // Fonction qui modifie le nombre d'objets pour un achat rapide ++
 
-function incrementValueItem(productId)
+function incrementValueItem(productId){}
 
 
 // Fin fonction achat rapide++
@@ -159,7 +159,7 @@ function incrementValueItem(productId)
 
 
 
-function decrementValueItem()
+function decrementValueItem(){}
 
 
 // Fin fonction achat rapide --
