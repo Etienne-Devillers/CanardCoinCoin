@@ -32,7 +32,30 @@ function removeAllItem() {}
 //------------------Fonction augmenter la quantité d'un article
 
 
-function addItem(product_Id) {}
+function addItem(product_Id) {
+    return  `
+    <div class="card">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-2">
+            <img class="image" src="${document.querySelector('img[data-productID=' + product_Id + ']').src}">
+        </div>
+
+        <div class="col-3 d-flex align-items-center">
+            <div class="card-body">
+                <h5 class="card-title">${document.querySelector('h5[data-productID=' + product_Id + ']').innerText}</h5>
+                <span class="price">${document.querySelector('span[data-productID=' + product_Id + ']').innerText}</span>
+            </div>
+        </div>
+
+        <div class="col-2 d-flex align-items-center">
+            <button class="btn remove-product"><img src="./assets/img/poubelle.png" alt="delete"></button>
+        </div>
+
+                </div>                 
+            </div>
+        </div>` 
+}
 
 
 //--Fin augmentation de la quantité
@@ -40,7 +63,11 @@ function addItem(product_Id) {}
 //------------------Fonction calculer la somme pour chaque article
 
 
-function sumItems(product_Id, quantity_Id) {}
+function sumItems(product_Id, quantity_Id) {
+
+    // for item get price and *quantity then =+ to Sum
+    // return sum
+}
 
 
 //--Fin Somme d'un article
@@ -63,7 +90,17 @@ function updateLocalStorage() {}
 //------------------Fonction Appel du localStorage
 
 
-function getLocalStorage() {}
+function getLocalStorage() {
+    // check basket(ls)
+    // get array of id an quantity
+    // get array item 
+    // -> get first 3 letters, get aray that starts with them 
+    // -> get numbers, go to index of that number
+    // var str = 'aze011';                        //element id
+    // var tab = str.substring(0, 3);             //first3 letters are for the array
+    // var ind = parseInt(str.substring(3), 10);  //converts last 3 digits in a number that doesn't start with 0
+    
+}
 
 
 
@@ -91,28 +128,31 @@ function createCards(arrayItem) {
     return `
         <div class="col">
             <div class="card overflow-hidden">
-                <img class="class="card-img-top image" src=" ${arrayItem.picture}" alt="${arrayItem.description}">
-
+                
+                    <img class="class="card-img-top image"  src=" ${arrayItem.picture}" alt="${arrayItem.description}" data-productId="${arrayItem.id}">
+                    
+                    
+                
                 <div class="card-body">
                     <div class="buyEl">
 
-                        <div class="button inputField">
-                                <div class="decrementBtn quantityModifier" data-productId="test"><span>-</span></div>
-                                <input readonly type="number" step="1" max="" value="1" name="quantityItem" class="quantityInput" data-productId="test">
-                                <div class="incrementBtn quantityModifier" data-productId="test"><span>+</span></div>
+                        <div class="button inputField ">
+                                <div class="decrementBtn quantityModifier" data-productId="${arrayItem.id}"><span>-</span></div>
+                                <input readonly type="number" step="1" max="" value="1" name="quantityItem" class="quantityInput" data-productId="${arrayItem.id}">
+                                <div class="incrementBtn quantityModifier" data-productId="${arrayItem.id}"><span>+</span></div>
                         </div>
                         
                         <div class="button">
-                            <button class="buyBtn" data-productId="test">Ajouter</button>
+                            <button class="buyBtn" data-productId="${arrayItem.id}">Ajouter</button>
                         </div>
 
                     </div>
-                    <h5>${arrayItem.title}</h5>
+                    <h5 data-productId="${arrayItem.id}" >${arrayItem.title}</h5>
                     <p>${arrayItem.description}</p>
                 </div>
 
                 <div class="card-footer">
-                    <span>${arrayItem.price}</span>
+                    <span data-productId="${arrayItem.id}" >${arrayItem.price}</span><span> €</span>
                 </div>
             </div>
         </div>
@@ -139,7 +179,8 @@ function changeDisplay(userChoice) {}
 
 // ---------------------------fonction qui trouve si l'index existe dans le localstorage
 
-let productIndex ;
+let productIndex;
+
 function findIndex(dataProductId) {
     productsBasket.filter((obj, index) => {
         productIndex = indexObj = obj.product_Id === dataProductId ? index : null;
@@ -179,7 +220,9 @@ function modalZoomImg(zoomBtn) {
 //------------------Fonction ouvrir le panier
 //Ouvre la modal du panier
 
-function openBasketModal(basketBtn) {}
+function openBasketModal(basketBtn) {
+    return ``
+}
 
 
 
