@@ -14,27 +14,7 @@
 <body>
 
         <!-- cards panier -->
-        <!-- <div class="card">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-2">
-                        <img class="image" src="./assets/img/classique/ange.png">
-                    </div>
-
-                    <div class="col-3 d-flex align-items-center">
-                        <div class="card-body">
-                            <h5 class="card-title">coin coin</h5>
-                            <span class="price">9.99€</span>
-                        </div>
-                    </div>
-
-                    <div class="col-2 d-flex align-items-center">
-                        <button class="btn remove-product"><img src="./assets/img/poubelle.png" alt="delete"></button>
-                    </div>
-
-                </div>                 
-            </div>
-        </div>  -->
+ 
     <!------------------------ Section Header ------------------------>
 
     <!--NavBar-->
@@ -84,7 +64,24 @@
                 <h5 class="offcanvas-title" id="offcanvasBottomLabel">articles</h5>
             </div>
             <div class="offcanvas-body">
-
+                <div class="card">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-3 colCardImg">
+                                <img class="imgCardBasket" src="./assets/img/classique/ange.png">
+                            </div>
+                            <div class="col-6 colCardText">
+                                <div class="card-body cardBodyModal">
+                                    <h5 class="card-title">coin coin</h5>
+                                    <p class="priceModal">9.99€</p>
+                                </div>
+                            </div>
+                            <div class="col-3 colCardBin">
+                                <button class="btn remove-product"><img src="./assets/img/poubelle.png" alt="delete"></button>
+                            </div>
+                        </div>                 
+                    </div>
+                </div>
             </div>
             <div class="offcanvas-footer">
                 <button type="button" class="btn orderBtn">Commander</button>
@@ -101,11 +98,11 @@
 
 
 
-    <!------------------------ Section Main ------------------------>
-    <main>
-        <div class="container">
-            <div class="row" id="firstRow">
-                <!-- <div class="col">
+                <!------------------------ Section Main ------------------------>
+<main>
+    <div class="container">
+        <div class="row" id="firstRow">
+            <!-- <div class="col">
                 <div class="card">
                     <img class="image" src="./assets/img/classique/jaune.png" alt="">
                     <div class="card-body">

@@ -89,25 +89,36 @@ function createCards(arrayItem) {
 
 
     return `
-        <div class="col">
-            <div class="card overflow-hidden">
-                
-                    <img class="class="card-img-top image" src=" ${arrayItem.picture}" alt="${arrayItem.description}">
-                    <div class="testss">
-                        <div class="test"></div>
-                        <div class="test"></div>
-                    </div>
-                    
-                
-                <div class="card-body">
-                    <h5>${arrayItem.title}</h5>
-                    <p>${arrayItem.description}</p>
+    <div class="col">
+    <div class="card overflow-hidden">
+
+            <img class="class="card-img-top image" src=" ${arrayItem.picture}" alt="${arrayItem.description}">
+
+
+
+        <div class="card-body">
+            <div class="buyEl">
+
+                <div class="button inputField">
+                        <div class="decrementBtn quantityModifier" data-productId="test"><span>-</span></div>
+                        <input readonly type="number" step="1" max="" value="1" name="quantityItem" class="quantityInput" data-productId="test">
+                        <div class="incrementBtn quantityModifier" data-productId="test"><span>+</span></div>
                 </div>
-                <div>
-                    <span>${arrayItem.price}</span>
+
+                <div class="button">
+                    <button class="buyBtn" data-productId="test">Ajouter</button>
                 </div>
+
             </div>
+            <h5>${arrayItem.title}</h5>
+            <p>${arrayItem.description}</p>
         </div>
+
+        <div class="card-footer">
+            <span>${arrayItem.price}</span>
+        </div>
+    </div>
+</div>
         `
 
 
@@ -129,44 +140,67 @@ function changeDisplay(userChoice) {}
 
 //--Fin changement d'affichage en fonction de la catégorie 
 
+//------------------Fonction qui trouve si l'index existe dans le localstorage
+
+let productIndex ;
+function findIndex(dataProductId) {
+    productsBasket.filter((obj, index) => {
+        productIndex = indexObj = obj.product_Id === dataProductId ? index : null;
+        return productIndex;
+    });
+}
+//fonction qui trouve si l'index existe dans le localstorage
+
 //------------------Fonction ajout au panier
 // Avant d'ajouer au panier, il faut déja vérifier si l'item est déjà présent dans le panier, si c'est le cas, ajouter +1 dans product_quantity,
 // sinon ajouter le product_item dans la variable du localstorage Basket.
 
-// function addToBasket(card.btn)
+function addToBasket(dataProductId) {
+    findIndex(dataProductId);
+    if (productIndex == null) {
+        productsBasket.push({
+            'product_Id': dataProductId,
+            'productQuantity': document.querySelector('input[data-productID=' + dataProductId + ']').value
+        })
+    } else {
+        productsBasket[productIndex].productQuantity = parseInt(productsBasket[productIndex].productQuantity) + parseInt(document.querySelector('input[data-productID=' + dataProductId + ']').value);
 
-
-
+    }
+    console.log(productsBasket)
+}
 //--Fin ajout au panier
 
 //------------------Fonction Zoom sur image
 // Ouvre une modal avec l'image en plus gros
 
-function modalZoomImg(zoomBtn) {}
+function modalZoomImg(zoomBtn) {
 
 
-
+}
 //--Fin Zoom sur image
 
 //------------------Fonction ouvrir le panier
 //Ouvre la modal du panier
 
-function openBasketModal(basketBtn){}
+function openBasketModal(basketBtn) {}
 
 
 
 //--Fin ouvrir le panier
 // Fonction qui modifie le nombre d'objets pour un achat rapide ++
 
-function incrementValueItem(){}
+function incrementValueItem(){
 
+    document.querySelector('input[data-productID=' + dataProductId + ']').value++
 
+}
 // Fin fonction achat rapide++
 // Fonction qui modifie le nombre d'objets pour un achat rapide --
 
 
 
-function decrementValueItem(){}
+function decrementValueItem(dataProductId) {
+    document.querySelector('input[data-productID=' + dataProductId + ']').value == 1 ? alert('vous ne pouvez pas ajouter aucun objet au panier') : document.querySelector('input[data-productID=' + dataProductId + ']').value--;
 
-
+}
 // Fin fonction achat rapide --
