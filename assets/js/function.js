@@ -32,15 +32,6 @@ function removeAllItem() {}
 
 // ---------------------------fonction qui trouve l'index dans le JSON
 
-// let productIndex;
-
-// function findIndex(dataProductId) {
-//     productsBasket.filter((obj, index) => {
-//         productIndex = indexObj = obj.product_Id === dataProductId ? index : null;
-//         return productIndex;
-//     });
-// }
-//fonction qui trouve l'index dans le JSON
 
 //------------------Fonction augmenter la quantité d'un article
 
@@ -133,6 +124,30 @@ function getLocalStorage() {
 // -------------------------------------------Fonctions propres à la main ------------------------------------------//
 //******************************************************************************************************************//
 
+function refreshButton(arrayName) {
+    arrayName.forEach(element => {
+
+        document.querySelector('.decrementBtn[data-productId=' + element.id + ']').addEventListener('click', (event) => {
+            decrementValueItem(event.currentTarget.dataset.productid);
+            console.log("test bouton -")
+        })
+
+        document.querySelector('.incrementBtn[data-productId=' + element.id + ']').addEventListener('click', (event) => {
+            incrementValueItem(event.currentTarget.dataset.productid);
+            console.log("test bouton +")
+        })
+
+        document.querySelector('button[data-productId=' + element.id + ']').addEventListener('click', (event) => {
+            addToBasket(event.currentTarget.dataset.productid);
+            document.querySelector('.offcanvas-body').innerHTML += addItem(element.id)
+            // updateLocalStorage()
+
+        })
+    })
+}
+
+
+
 //------------------Fonction Fetch Initial et stockage dans une variable
 
 
@@ -199,14 +214,17 @@ function changeDisplay(userChoice) {}
 
 // ---------------------------fonction qui trouve si l'index existe dans le localstorage
 
-let productIndex;
 
+let productIndex = null;
 function findIndex(dataProductId) {
-    productsBasket.filter((obj, index) => {
-        productIndex = indexObj = obj.product_Id === dataProductId ? index : null;
-        return productIndex;
-    });
-}
+    productsBasket.forEach((element, index) => {
+        if (dataProductId == element.product_Id) {
+            productIndex = index
+        }
+    })
+};
+
+
 //fonction qui trouve si l'index existe dans le localstorage
 
 //------------------Fonction ajout au panier
@@ -215,11 +233,14 @@ function findIndex(dataProductId) {
 
 function addToBasket(dataProductId) {
     findIndex(dataProductId);
+    console.log(productIndex)
     if (productIndex == null) {
         productsBasket.push({
             'product_Id': dataProductId,
             'productQuantity': document.querySelector('input[data-productID=' + dataProductId + ']').value,
-            'productPrice': document.querySelector('span[data-productID=' + dataProductId + ']').innerText
+            'productPrice': document.querySelector('span[data-productID=' + dataProductId + ']').innerText,
+            'product_img': document.querySelector('img[data-productID=' + dataProductId + ']').src,
+            'product-title': document.querySelector('h5[data-productID=' + dataProductId + ']').innerText
         })
     } else {
         productsBasket[productIndex].productQuantity = parseInt(productsBasket[productIndex].productQuantity) + parseInt(document.querySelector('input[data-productID=' + dataProductId + ']').value);
@@ -263,4 +284,5 @@ function decrementValueItem(dataProductId) {
     document.querySelector('input[data-productID=' + dataProductId + ']').value == 1 ? alert('vous ne pouvez pas ajouter aucun objet au panier') : document.querySelector('input[data-productID=' + dataProductId + ']').value--;
 
 }
-// Fin fonction achat rapide --
+
+// Fin fonction achat rapide 
