@@ -1,13 +1,7 @@
-body {
     margin: 0;
 }
 
 .col{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.card{
     width: 13rem;
     margin: 0.6rem; 
     background-color: rgb(255, 255, 255);
