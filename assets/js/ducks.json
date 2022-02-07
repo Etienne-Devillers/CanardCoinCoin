@@ -339,7 +339,7 @@
             "id":"fic003",
             "title":"Chewbacca",
             "description":"Canard déguisé en Chewbacca",
-            "picture":"./assets/img/fiction/chebacca.png",
+            "picture":"./assets/img/fiction/chewbacca.png",
             "price":"14.99"
         },
         {
@@ -416,7 +416,7 @@
             "id":"fic014",
             "title":"Jack Sparrow",
             "description":"Canard déguisé en Jack Sparrow",
-            "picture":"./assets/img/fiction/pirate_des_caraibes.png",
+            "picture":"./assets/img/fiction/pirates_des_caraibes.png",
             "price":"14.99"
         },
         {
@@ -446,7 +446,7 @@
             "id":"spo003",
             "title":"Body bulder",
             "description":"Canard déguisé en body bulder avec ses altères",
-            "picture":"./assets/img/sport/body_builder.png",
+            "picture":"./assets/img/sport/body_bulder.png",
             "price":"11.99"
         },
         {
