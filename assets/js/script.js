@@ -32,3 +32,19 @@ ducksDataBase.animals.forEach(element => {
 
 
     });
+
+    
+document.querySelector('.incrementBtn').addEventListener('click', (event) => { 
+    incrementValueItem(event.currentTarget.dataset.productid) ;
+
+})
+
+document.querySelector('.decrementBtn').addEventListener('click', (event) => { 
+    decrementValueItem(event.currentTarget.dataset.productid) ;
+
+})
+
+document.querySelector('.buyBtn').addEventListener('click', (event) => { 
+    addToBasket(event.currentTarget.dataset.productid);
+
+})

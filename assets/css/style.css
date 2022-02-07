@@ -1,40 +1,171 @@
-    margin: 0;
+body{
+    background-color: coral;
 }
 
-.col{
+
+/* -------------------------CARDS STYLE-------------------------------------- */
+#firstRow {
+justify-content: center;
+}
+
+#firstRow .col{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+#firstRow .card{
     width: 13rem;
     margin: 0.6rem; 
     background-color: rgb(255, 255, 255);
     border-radius: 0.5rem;
 }
-/* .card-header {
-    width: 100%;
-    background-color: white;
-    border: none;
-    padding: 0%;
-    height: 1rem;
-} */
-.image{
+
+#firstRow .image{
     object-fit: cover;
     object-position: 100%;
     margin-top: 1rem;
-    width: 90%;
+    height: 13rem;
 }
 
-
-.testss {
-    display: flex;
-    justify-content: space-between;
-}
-.test {
-    height: 2em;
-    width: 6em;
-    border: 2px solid blue;
-    display: none;
-}
-.card-body{
+#firstRow .card-body{
     text-align: center;
     padding-top: 0%;
+    position: relative;
+}
+
+#firstRow .buyEl {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    background-color: rgb(113, 113, 184);
+    /* please read comments if you edit this part */
+    top: -3rem;     
+    display: none;   /* to display when hovered on computer and when divice=mobile */
+    width: 11rem;    /* card width(13rem) - padding width(2*1rem) */
+}
+
+
+
+
+#firstRow h5{
+    
+    color: orange;
+    font-size:1.9rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#firstRow p{
+    margin: -0.5rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+#firstRow .card-footer{
+    margin-top: -0.3rem;
+    text-align: end;
+    color: orange;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: white;
+    font-size: larger;
+    border: none;
+    padding: 0 1rem;
+    padding-bottom: .5rem;
+}
+
+#firstRow .card:hover .buyEl  {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+/* -------------------------FIN CARRD STYLE-------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------Début des boutons de quantité------------------------ */
+
+
+.inputField {
+    display: flex;
+    margin: 1em 1em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 5px;
+    width: 3rem;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+}
+
+.quantityInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantityInput {
+    margin: 0;
+    width: 50px;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    border-color: black;
+    border-width: 0 1px 0 1px;
+    color: black;
+    height: 35px;
+}
+
+
+.quantityModifier {
+    font-size: 2em;
+    text-align: center;
+    font-weight: 900;
+    border-radius: 0 25px 25px 0;
+    width: 50px;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.quantityModifier span {
+    margin-bottom: 7px;
+}
+
+.incrementBtn {
+    border-radius: 25px 0 0 25px;
+}
+
+
+/* Fin des boutons de quantité */
+
+/* ---------------------Début du bouton d'achat--------------------------- */
+
+.buyBtn {
+margin: 1em 1em;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 5px;
+width: 4rem;
+height: 1rem;
+border-radius: 25px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 800;
+color: white;
+background-color: #FF5A5A;
+border: solid 0px;
 }
 
 
