@@ -61,7 +61,7 @@
                 <h5 class="offcanvas-title" id="offcanvasBottomLabel">articles</h5>
             </div>
             <div class="offcanvas-body">
-                <div class="card">
+                <div class="card cardModal">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-3 colCardImg">
@@ -69,19 +69,49 @@
                             </div>
                             <div class="col-6 colCardText">
                                 <div class="card-body cardBodyModal">
-                                    <h5 class="card-title">coin coin</h5>
+                                    <h5 class="card-title cardTitleModal">coin coin</h5>
                                     <p class="priceModal">9.99€</p>
                                 </div>
                             </div>
-                            <div class="col-3 colCardBin">
-                                <button class="btn remove-product"><img src="./assets/img/poubelle.png" alt="delete"></button>
+                            <div class="col-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="button inputField">
+                                            <div class="decrementBtn quantityModifier" data-productId="test"><span>-</span></div>
+                                                <input readonly type="number" step="1" max="" value="1" name="quantityItem" class="quantityInput" data-productId="test">
+                                            <div class="incrementBtn quantityModifier" data-productId="test"><span>+</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row rowPriceQte">
+                                    <div class="col colPriceQte">
+                                        <p class="priceQteModal">9.99€</p>
+                                    </div>
+                                    <div class="col colBinCard">
+                                        <button class="btn remove-product"><img src="./assets/img/poubelle.png" alt="delete"></button>
+                                    </div>
+                                </div>
                             </div>
                         </div>                 
                     </div>
                 </div>
             </div>
             <div class="offcanvas-footer">
-                <button type="button" class="btn orderBtn">Commander</button>
+                <div class="container-fluid">
+                    <div class="row rowCardTotal">
+                        <div class="col colPriceTotal">
+                            <p class="priceTotaModal">9.99€</p>
+                        </div>
+                        <div class="col colTotalProduct">
+                            <button class="btn removeTotalProduct"><img src="./assets/img/poubelle.png" alt="delete"></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col colOrderBtn">
+                            <button type="button" class="btn orderBtn">Commander</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
