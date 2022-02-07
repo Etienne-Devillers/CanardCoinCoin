@@ -16,7 +16,7 @@ function RemoveItem(product_Id) {}
 //------------------Fonction De retrait d'un article (quantité -1)
 // verifier qu'en retirant un article on ne tombe pas à 0. si c'est le cas, supprimer l'item
 
-function RemoveQuantityItem(product_Id){}
+function RemoveQuantityItem(product_Id) {}
 
 
 
@@ -24,7 +24,7 @@ function RemoveQuantityItem(product_Id){}
 
 //------------------Fonction de supression de tout les articles
 
-function removeAllItem(){}
+function removeAllItem() {}
 
 
 //--Fin supression de tout les articles
@@ -32,7 +32,7 @@ function removeAllItem(){}
 //------------------Fonction augmenter la quantité d'un article
 
 
-function addItem(product_Id){}
+function addItem(product_Id) {}
 
 
 //--Fin augmentation de la quantité
@@ -40,7 +40,7 @@ function addItem(product_Id){}
 //------------------Fonction calculer la somme pour chaque article
 
 
-function sumItems(product_Id, quantity_Id){}
+function sumItems(product_Id, quantity_Id) {}
 
 
 //--Fin Somme d'un article
@@ -48,14 +48,14 @@ function sumItems(product_Id, quantity_Id){}
 //------------------Fonction calculer la somme du panier
 
 
-function sumItemsTotal(){}
+function sumItemsTotal() {}
 
 //--Fin Somme du panier
 
 //------------------Fonction Mise à jour du localStorage
 
 
-function updateLocalStorage(){}
+function updateLocalStorage() {}
 
 
 //--Fin mise à jour du localStorage
@@ -63,7 +63,7 @@ function updateLocalStorage(){}
 //------------------Fonction Appel du localStorage
 
 
-function getLocalStorage(){}
+function getLocalStorage() {}
 
 
 
@@ -78,7 +78,7 @@ function getLocalStorage(){}
 //------------------Fonction Fetch Initial et stockage dans une variable
 
 
-function fetchAndSaveIt(){}  
+function fetchAndSaveIt() {}
 
 //--Fin Fetch Initial et stockage dans une variable
 
@@ -89,36 +89,33 @@ function createCards(arrayItem) {
 
 
     return `
-    <div class="col">
-    <div class="card overflow-hidden">
+        <div class="col">
+            <div class="card overflow-hidden">
+                <img class="class="card-img-top image" src=" ${arrayItem.picture}" alt="${arrayItem.description}">
 
-            <img class="class="card-img-top image" src=" ${arrayItem.picture}" alt="${arrayItem.description}">
+                <div class="card-body">
+                    <div class="buyEl">
 
+                        <div class="button inputField">
+                                <div class="decrementBtn quantityModifier" data-productId="test"><span>-</span></div>
+                                <input readonly type="number" step="1" max="" value="1" name="quantityItem" class="quantityInput" data-productId="test">
+                                <div class="incrementBtn quantityModifier" data-productId="test"><span>+</span></div>
+                        </div>
+                        
+                        <div class="button">
+                            <button class="buyBtn" data-productId="test">Ajouter</button>
+                        </div>
 
-
-        <div class="card-body">
-            <div class="buyEl">
-
-                <div class="button inputField">
-                        <div class="decrementBtn quantityModifier" data-productId="test"><span>-</span></div>
-                        <input readonly type="number" step="1" max="" value="1" name="quantityItem" class="quantityInput" data-productId="test">
-                        <div class="incrementBtn quantityModifier" data-productId="test"><span>+</span></div>
+                    </div>
+                    <h5>${arrayItem.title}</h5>
+                    <p>${arrayItem.description}</p>
                 </div>
 
-                <div class="button">
-                    <button class="buyBtn" data-productId="test">Ajouter</button>
+                <div class="card-footer">
+                    <span>${arrayItem.price}</span>
                 </div>
-
             </div>
-            <h5>${arrayItem.title}</h5>
-            <p>${arrayItem.description}</p>
         </div>
-
-        <div class="card-footer">
-            <span>${arrayItem.price}</span>
-        </div>
-    </div>
-</div>
         `
 
 
@@ -140,7 +137,7 @@ function changeDisplay(userChoice) {}
 
 //--Fin changement d'affichage en fonction de la catégorie 
 
-//------------------Fonction qui trouve si l'index existe dans le localstorage
+// ---------------------------fonction qui trouve si l'index existe dans le localstorage
 
 let productIndex ;
 function findIndex(dataProductId) {
@@ -189,7 +186,7 @@ function openBasketModal(basketBtn) {}
 //--Fin ouvrir le panier
 // Fonction qui modifie le nombre d'objets pour un achat rapide ++
 
-function incrementValueItem(){
+function incrementValueItem(dataProductId) {
 
     document.querySelector('input[data-productID=' + dataProductId + ']').value++
 
