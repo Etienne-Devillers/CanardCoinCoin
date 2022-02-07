@@ -48,28 +48,42 @@ function removeAllItem() {}
 function addItem(product_Id) {
 
 
-return ` <div class="card">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-2">
-            <img class="image" src="${document.querySelector('img[data-productID=' + product_Id + ']').src}">
+    return `
+        <div class="card cardModal">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3 colCardImg">
+                    <img class="imgCardBasket" src="${document.querySelector('img[data-productID=' + product_Id + ']').src}">
+                </div>
+                <div class="col-6 colCardText">
+                    <div class="card-body cardBodyModal">
+                        <h5 class="card-title cardTitleModal">${document.querySelector('h5[data-productID=' + product_Id + ']').innerText}</h5>
+                        <p class="priceModal">${document.querySelector('span[data-productID=' + product_Id + ']').innerText} €</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="row">
+                        <div class="col">
+                            <div class="button inputField">
+                                <div class="decrementBtn quantityModifier" data-productId="test"><span>-</span></div>
+                                    <input readonly type="number" step="1" max="" value="1" name="quantityItem" class="quantityInput" data-productId="test">
+                                <div class="incrementBtn quantityModifier" data-productId="test"><span>+</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row rowPriceQte">
+                        <div class="col colPriceQte">
+                            <p class="priceQteModal">9.99€</p>
+                        </div>
+                        <div class="col colBinCard">
+                            <button class="btn remove-product"><img src="./assets/img/poubelle.png" alt="delete"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>                 
         </div>
-
-        <div class="col-3 d-flex align-items-center">
-            <div class="card-body">
-                <h5 class="card-title">${document.querySelector('h5[data-productID=' + product_Id + ']').innerText}</h5>
-                <span class="price">${document.querySelector('span[data-productID=' + product_Id + ']').innerText}</span>
-            </div>
         </div>
-
-        <div class="col-2 d-flex align-items-center">
-            <button class="btn remove-product"><img src="./assets/img/poubelle.png" alt="delete"></button>
-        </div>
-
-                </div>                 
-            </div>
-        </div> 
-`
+        `
 }
 //--Fin augmentation de la quantité
 
@@ -197,7 +211,7 @@ function addToBasket(dataProductId) {
         productsBasket.push({
             'product_Id': dataProductId,
             'productQuantity': document.querySelector('input[data-productID=' + dataProductId + ']').value,
-            'productPrice' : document.querySelector('span[data-productID=' + dataProductId + ']').innerText
+            'productPrice': document.querySelector('span[data-productID=' + dataProductId + ']').innerText
         })
     } else {
         productsBasket[productIndex].productQuantity = parseInt(productsBasket[productIndex].productQuantity) + parseInt(document.querySelector('input[data-productID=' + dataProductId + ']').value);

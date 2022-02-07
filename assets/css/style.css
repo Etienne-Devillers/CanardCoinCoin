@@ -79,6 +79,7 @@ header .cardModal {
     border: transparent;
     border-radius: 1rem;
     box-shadow: 0 -0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+    width: 100%;
 }
 
 header .colCardText, .colCardImg{
