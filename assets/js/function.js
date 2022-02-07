@@ -11,6 +11,7 @@ function RemoveItem(product_Id) {}
 
 
 
+
 //--Fin supression d'un article
 
 //------------------Fonction De retrait d'un article (quantité -1)
@@ -24,7 +25,9 @@ function RemoveQuantityItem(product_Id) {}
 
 //------------------Fonction de supression de tout les articles
 
-function removeAllItem() {}
+function removeAllItem() {
+    localStorage.clear();
+};
 
 
 //--Fin supression de tout les articles
