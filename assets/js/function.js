@@ -90,7 +90,9 @@ function addItem(product_Id) {
 //------------------Fonction calculer la somme pour chaque article
 
 
-function sumItems(product_Id, quantity_Id) {}
+function sumItems(element) {
+    return element.productPrice * element.productQuantity
+}
 
 
 //--Fin Somme d'un article
@@ -98,7 +100,13 @@ function sumItems(product_Id, quantity_Id) {}
 //------------------Fonction calculer la somme du panier
 
 
-function sumItemsTotal() {}
+function sumItemsTotal() {
+    let sum
+    productsBasket.forEach(element => {
+        sum += element.productPrice * element.productQuantity
+    });
+    return sum
+}
 
 //--Fin Somme du panier
 
@@ -225,7 +233,8 @@ function addToBasket(dataProductId) {
 // Ouvre une modal avec l'image en plus gros
 
 function modalZoomImg(zoomBtn) {
-
+    // get img(on witch you clicked).src
+    // return `modale img with same src`
 
 }
 //--Fin Zoom sur image
