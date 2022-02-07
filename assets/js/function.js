@@ -30,8 +30,47 @@ function removeAllItem() {}
 //--Fin supression de tout les articles
 
 
-// ---------------------------fonction qui trouve l'index dans le JSON
+// ---------------------------fonction qui refresh le panier à l'ouvertures
+function refreshBasketDisplay(element) {
 
+
+    return `
+        <div class="card cardModal">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3 colCardImg">
+                    <img class="imgCardBasket" src="${element.product_img}">
+                </div>
+                <div class="col-6 colCardText">
+                    <div class="card-body cardBodyModal">
+                        <h5 class="card-title cardTitleModal">${element.product_title}</h5>
+                        <p class="priceModal">${element.productPrice} €</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="row">
+                        <div class="col">
+                            <div class="button inputField">
+                                <div class="decrementBtn quantityModifier" data-productId="test"><span>-</span></div>
+                                    <input readonly type="number" step="1" max="" value="1" name="quantityItem" class="quantityInput" data-productId="test">
+                                <div class="incrementBtn quantityModifier" data-productId="test"><span>+</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row rowPriceQte">
+                        <div class="col colPriceQte">
+                            <p class="priceQteModal">9.99€</p>
+                        </div>
+                        <div class="col colBinCard">
+                            <button class="btn remove-product"><img src="./assets/img/poubelle.png" alt="delete"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>                 
+        </div>
+        </div>
+        `
+}
 
 //------------------Fonction augmenter la quantité d'un article
 
@@ -131,7 +170,9 @@ function refreshButton(arrayName) {
 
         document.querySelector('button[data-productId=' + element.id + ']').addEventListener('click', (event) => {
             addToBasket(event.currentTarget.dataset.productid);
-            document.querySelector('.offcanvas-body').innerHTML += addItem(element.id)
+            console.log(addToBasket(event.currentTarget.dataset.productid));
+                document.querySelector('.offcanvas-body').innerHTML += addItem(element.id)
+                console.log(productsBasket)
             // updateLocalStorage()
 
         })
@@ -208,6 +249,7 @@ function changeDisplay(userChoice) {}
 
 
 let productIndex = null;
+
 function findIndex(dataProductId) {
     productsBasket.forEach((element, index) => {
         if (dataProductId == element.product_Id) {
@@ -232,13 +274,13 @@ function addToBasket(dataProductId) {
             'productQuantity': document.querySelector('input[data-productID=' + dataProductId + ']').value,
             'productPrice': document.querySelector('span[data-productID=' + dataProductId + ']').innerText,
             'product_img': document.querySelector('img[data-productID=' + dataProductId + ']').src,
-            'product-title': document.querySelector('h5[data-productID=' + dataProductId + ']').innerText
+            'product_title': document.querySelector('h5[data-productID=' + dataProductId + ']').innerText
         })
     } else {
         productsBasket[productIndex].productQuantity = parseInt(productsBasket[productIndex].productQuantity) + parseInt(document.querySelector('input[data-productID=' + dataProductId + ']').value);
-
     }
-    console.log(productsBasket)
+    return productIndex
+
 }
 //--Fin ajout au panier
 

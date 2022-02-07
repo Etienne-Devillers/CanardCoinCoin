@@ -1,7 +1,11 @@
 // Initialisation  et récupération de la variable du panier. sauvegardé dans le localstorage
 let productsBasket = localStorage.getItem('visitor') ? JSON.parse(localStorage.getItem('visitor')) : [];
 
-
+if (productsBasket !== []) {
+    productsBasket.forEach(element => {
+        document.querySelector('.offcanvas-body').innerHTML += refreshBasketDisplay(element)
+    })
+}
 
 
 
