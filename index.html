@@ -12,58 +12,78 @@
 </head>
 
 <body>
+    <!------------------------ Section Header ------------------------>
 
-    <!-- model cards -->
-
-
-                <!-- <h1>Shopping Cart</h1>
-
-        <div class="container-fluid panier">
+    <!--NavBar-->
+    <header>
+        <div class="container-fluid">
             <div class="row">
                 <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5>Coin coin</h5>
-                            <img src="./assets/img/classique/ange.png">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <a class="navbar-brand navbarLogo" href="#">
+                                Canard<br>CoinCoin
+                            </a>
+                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                <div class="navbar-nav">
+                                    <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                                    <a id="classics" class="nav-link" href="#">Classique</a>
+                                    <a id="fiction" class="nav-link" href="#">Personnage de fiction</a>
+                                    <a id="animals" class="nav-link" href="#">Animaux</a>
+                                    <a id="celebrities" class="nav-link" href="#">Célébrités</a>
+                                    <a id="professions" class="nav-link" href="#">Métiers</a>
+                                    <a id="sport" class="nav-link" href="#">Sport</a>
+                                </div>
+                            </div>
+                            <!--Button trigger modal-->
+                            <div>
+                                <button class="btn cartBtn" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+                                    <img src="assets/img/Icons/cart.png" alt="Panier" class="cartIcons">
+                                </button>
+                            </div>
+                            <!--Button trigger modal-->
                         </div>
-                        <div class="product-quantity">
-                            <input type="number" value="2" min="1">
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!--NavBar-->
+        <!-- Modal -->
+        <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom"
+            aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasBottomLabel">articles</h5>
+            </div>
+            <div class="offcanvas-body">
+            </div>
+            <div class="offcanvas-footer">
+                <div class="container-fluid">
+                    <div class="row rowCardTotal">
+                        <div class="col colPriceTotal">
+                            <p class="priceTotaModal">9.99€</p>
                         </div>
-                        <div class="card-footer">
-                            <span>9.99€</span>
-                            <button class="remove-product">Remove</button>
+                        <div class="col colTotalProduct">
+                            <button class="btn removeTotalProduct"><img src="./assets/img/poubelle.png" alt="delete"></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col colOrderBtn">
+                            <button type="button" class="btn orderBtn">Commander</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
+    </header>
+    <!-- Modal -->
 
-
-
-
-
-
-
-    <!-- <div class="inputField">
-        <div class="decrementBtn quantityModifier" data-productId="test"><span>-</span></div>
-        <input readonly type="number" step="1" max="" value="1" name="quantityItem" class="quantityInput" data-productId="test">
-        <div class="incrementBtn quantityModifier" data-productId="test"><span>+</span></div>
-    </div> -->
-    
-    <!-- <button class="buyBtn" data-productId="test">Ajouter</button> -->
-
-
-
-                <!------------------------ Section Header ------------------------>
-
-
-
-                <!------------------------ Fin Section Header ------------------------>
-
-
-
-
-
+    <!------------------------ Fin Section Header ------------------------>
 
                 <!------------------------ Section Main ------------------------>
 <main>
@@ -81,12 +101,25 @@
                     </div>
                 </div>
             </div> -->
+            </div>
         </div>
-    </div>
+    </main>
+    <!------------------------ Fin Section Main ------------------------>
+
+    <!------------------------ Section Footer ------------------------>
 
 
+    <footer>
+        <div class="d-flex footer">
+            <p class="m-0">&copy; 2022 Canard Coin Coin</p>
+        </div>
+    </footer>
 
     <!------------------------ Fin Section Footer ------------------------>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
     <script src="assets/js/function.js"></script>
     <script src="assets/js/script.js"></script>
 </body>

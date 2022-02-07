@@ -1,18 +1,188 @@
-body{
-    background-color: coral;
+body {
+    margin: 0;
 }
 
+/* NavBar */
+header .col {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+header .navbar {
+    justify-content: center;
+    padding: 0.3rem 0.5rem 0.2rem 0.5rem;
+    border-bottom: 0.5rem solid #FAFF74;
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+header .navbar-brand{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #212529;
+}
+
+header .navbarLogo {
+    margin: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.6rem;
+    line-height: normal;
+    text-align:center;
+    background-image: url('../img/Icons/logoDuck.svg');
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header .cartIcons{
+    width: 2rem;
+    height: auto;
+}
+
+header .navbar-collapse {
+    justify-content: center;
+}
+
+header .nav-link {
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    color: #FE8F39!important;
+}
+/* NavBar */
+
+/*Modal*/
+header .offcanvas-bottom {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    left: unset;
+    min-width: 20rem;
+    height: 25rem;
+}
+
+header .offcanvas-header {
+    justify-content: end;
+    height: 2.5rem;
+}
+
+header .offcanvas-footer {
+    padding: 1rem 1rem;
+}
+
+header .orderBtn {
+    color: white;
+    background-color: #FF5A5A;
+    border-radius: 20px;
+}
+/*Modal*/
+
+/*Card Modal*/
+header .cardModal {
+    border: transparent;
+    border-radius: 1rem;
+    box-shadow: 0 -0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+header .colCardText, .colCardImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+header .imgCardBasket {
+    width: 4.5rem;
+    height: auto;
+}
+
+header .cardBodyModal {
+    padding: 0 1rem 0 1rem;
+}
+
+header .cardTitleModal {
+    color: orange;
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header .priceModal {
+    margin-bottom: 0.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+header .inputField {
+    width: 4rem;
+    height: 2rem;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+header .quantityModifier {
+    color: #FF5A5A;
+}
+
+header .quantityInput {
+    color: #FF5A5A;
+}
+
+header .rowPriceQte {
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+header .colPriceQte, .colBinCard {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+header .priceQteModal, .priceTotaModal {
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+header .priceQteModal {
+    font-size: 1.2rem;
+}
+
+header .priceTotaModal {
+    font-size: 1.5rem;
+}
+
+header .remove-product {
+    padding: 0;
+}
+
+header .colPriceTotal, .colTotalProduct {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+header .colOrderBtn {
+    display: flex;
+    justify-content: center;
+}
+/*Card Modal*/
+
+/* Footer */
+footer .footer {
+    background-color: white;
+    justify-content: center;
+    padding: 0.4rem;
+    border-top: 0.5rem solid #FAFF74;
+    box-shadow: 0 -0.1rem 1rem rgba(0, 0, 0, 0.2);
+}
+/* Footer */
 
 /* -------------------------CARDS STYLE-------------------------------------- */
 #firstRow {
-justify-content: center;
-}
-
+    justify-content: center;
+    }
+    
 #firstRow .col{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 
 #firstRow .card{
@@ -49,9 +219,6 @@ justify-content: center;
     /* justify-content: space-between; */
 }
 
-
-
-
 #firstRow h5{
     
     color: orange;
@@ -76,30 +243,10 @@ justify-content: center;
     padding: 0 1rem;
     padding-bottom: .5rem;
 }
-
-
-
 /* -------------------------FIN CARRD STYLE-------------------------------------- */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* --------------------Début des boutons de quantité------------------------ */
-
-
-#firstRow .inputField {
+.inputField {
     width: 5rem;
     height: 2rem;
     display: flex;
@@ -108,16 +255,19 @@ justify-content: center;
     /* margin: 1em 1em; */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 5px;
     border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(16px) saturate(200%);
     -webkit-backdrop-filter: blur(16px) saturate(200%);
 }
 
-#firstRow .quantityInput::-webkit-inner-spin-button {
+.quantityInput::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-#firstRow .quantityInput {
+.quantityInput {
     margin: 0;
     width: 1.5em;
     height: 2rem;
@@ -130,18 +280,15 @@ justify-content: center;
     background-color: transparent;
 }
 
-
-#firstRow .quantityModifier {
+.quantityModifier {
     margin: 0;
     width: 1.6rem;
     font-size: 1.8em;
     font-weight: 800;
     line-height: .5em;
-
     border-radius: 0 25px 25px 0;
     color: rgb(44, 44, 44);
     cursor: pointer;
-
     /* display: flex;
     align-items: center;
     justify-content: center; */
@@ -154,15 +301,12 @@ justify-content: center;
     margin-bottom: 7px;
 } */
 
-#firstRow .incrementBtn {
+.incrementBtn {
     border-radius: 25px 0 0 25px;
 }
-
-
 /* Fin des boutons de quantité */
 
 /* ---------------------Début du bouton d'achat--------------------------- */
-
 #firstRow .buyBtn {
 /* margin: 1em 1em; */
     width: 5rem;
@@ -178,4 +322,124 @@ justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 5px;
 }
 
-/* Fin des boutons */
+
+
+h5{
+    
+    color: orange;
+    font-size:1.9rem;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+p{
+    margin: -0.5rem;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+.card-footer{
+    margin-top: -0.3rem;
+    text-align: end;
+    color: orange;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: white;
+    font-size: larger;
+    border: none;
+    padding: 0 1rem;
+    padding-bottom: .5rem;
+}
+
+/* .card:hover . {
+} */
+
+.col {
+    padding: 0;
+}
+/* NavBar */
+.navbar {
+    justify-content: center;
+    padding: 0.3rem 0.5rem 0.2rem 0.5rem;
+    border-bottom: 0.5rem solid #FAFF74;
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
+}
+.navbar-brand{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #212529;
+}
+.navbarLogo {
+    margin: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.6rem;
+    line-height: normal;
+    text-align:center;
+    background-image: url('../img/Icons/logoDuck.svg');
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cartIcons{
+    width: 2rem;
+    height: auto;
+}
+.navbar-collapse {
+    justify-content: center;
+}
+.nav-link {
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    color: #FE8F39!important;
+}
+/* NavBar */
+/*Modal*/
+.offcanvas-bottom {
+    left: unset;
+    width: 20rem;
+    max-width: 100%;
+    height: 25rem;
+}
+.offcanvas-header {
+    justify-content: end;
+}
+.offcanvas-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+}
+/*Modal*/
+/* Footer */
+.footer {
+    justify-content: center;
+    padding: 0.4rem;
+    border-top: 0.5rem solid #FAFF74;
+    box-shadow: 0 -0.1rem 1rem rgba(0, 0, 0, 0.2);
+}
+.orderBtn {
+    color: white;
+    background-color: #FF5A5A;
+    border-radius: 20px;
+}
+/* Footer */
+
+
+ /* cards panier */
+.image{
+    width: 6rem;
+    
+}
+.card-title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:1.5rem;
+    font-size:2rem;
+    
+}
+.card{
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1.5rem;
+    align-items: space-between;
+}
+.price{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/* coucou */

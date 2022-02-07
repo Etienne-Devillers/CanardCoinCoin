@@ -65,8 +65,7 @@ function addItem(product_Id) {
 
 function sumItems(product_Id, quantity_Id) {
 
-    // for item get price and *quantity then =+ to Sum
-    // return sum
+
 }
 
 
@@ -96,6 +95,9 @@ function getLocalStorage() {
     // get array item 
     // -> get first 3 letters, get aray that starts with them 
     // -> get numbers, go to index of that number
+    // for item get price and *quantity then =+ to Sum
+    // return sum
+
     // var str = 'aze011';                        //element id
     // var tab = str.substring(0, 3);             //first3 letters are for the array
     // var ind = parseInt(str.substring(3), 10);  //converts last 3 digits in a number that doesn't start with 0
