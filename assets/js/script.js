@@ -1,10 +1,6 @@
 // Initialisation  et récupération de la variable du panier. sauvegardé dans le localstorage
 let productsBasket = localStorage.getItem('visitor') ? JSON.parse(localStorage.getItem('visitor')) : [];
 
-
-
-
-
 fetch("assets/js/ducks.json")
 
     .then(function (resp) {
@@ -17,7 +13,7 @@ fetch("assets/js/ducks.json")
         console.log(ducksDataBase);
 
         ducksDataBase.animals.forEach(element => {
-            firstRow.innerHTML += createCards(element)
+            firstRow.innerHTML += createCards(element);
         });
         refreshButton(ducksDataBase.animals);
 
@@ -75,42 +71,20 @@ fetch("assets/js/ducks.json")
             });
             refreshButton(ducksDataBase.sport);
         });
-
-        ducksDataBase.animals.forEach((element) => {
-            document.querySelector('.decrementBtn[data-productId=' + element.id + ']').addEventListener('click', (event) => {
-                decrementValueItem(event.currentTarget.dataset.productid) ;
-                console.log("test bouton -");
-                updateLocalStorage();
-            });
-            document.querySelector('.incrementBtn[data-productId=' + element.id + ']').addEventListener('click', (event) => {
-                incrementValueItem(event.currentTarget.dataset.productid) ;
-                console.log("test bouton +");
-                updateLocalStorage();
-            });
-            document.querySelector('button[data-productId=' + element.id + ']').addEventListener('click', (event) => {
-                addToBasket(event.currentTarget.dataset.productid);
-                document.querySelector('.offcanvas-body').innerHTML += addItem(element.id);
-                updateLocalStorage();
-            });
-        });
-
+        
         let removeTotalProduct = document.querySelector('.removeTotalProduct');
-        let offcanvasBody = document.querySelector('.offcanvas-body');
-        removeTotalProduct.addEventListener('click', () => {
-            offcanvasBody.innerHTML = '';
-            removeAllItem();
-        });
+            removeTotalProduct.addEventListener('click', () => {
+                removeAllItem();
+            });
 
         let removeProduct = document.querySelectorAll('.remove-product');
         console.log(removeProduct);
         removeProduct.forEach(element => {
             element.addEventListener('click', (event) => {
-                getLocalStorage();
-                console.log(productsBasket);
-                productIdRemove = event.target.dataset.productid;
-                console.log(productIdRemove);
-                
-
+                productIdRemove = event.target.dataset.removeid;
+                findIndex(productIdRemove);
+                productsBasket.splice(productIndex, 1);
+                localStorage.setItem('visitor',JSON.stringify(productsBasket));
             });
         });
     });

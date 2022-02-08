@@ -7,7 +7,9 @@
 //------------------Fonction De supression d'un article
 
 
-function RemoveItem(product_Id) {}
+function RemoveItem(product_Id) {
+    
+};
 
 
 
@@ -17,7 +19,7 @@ function RemoveItem(product_Id) {}
 //------------------Fonction De retrait d'un article (quantité -1)
 // verifier qu'en retirant un article on ne tombe pas à 0. si c'est le cas, supprimer l'item
 
-function RemoveQuantityItem(product_Id) {}
+function RemoveQuantityItem(product_Id) {};
 
 
 
@@ -26,7 +28,9 @@ function RemoveQuantityItem(product_Id) {}
 //------------------Fonction de supression de tout les articles
 
 function removeAllItem() {
-    localStorage.clear();
+    document.querySelector('.offcanvas-body').innerHTML = '';
+    productsBasket.splice(0, productsBasket.length);
+    localStorage.setItem('visitor',JSON.stringify(productsBasket));
 };
 
 
@@ -70,7 +74,7 @@ function addItem(product_Id) {
                             <p class="priceQteModal">9.99€</p>
                         </div>
                         <div class="col colBinCard">
-                            <button class="btn remove-product"><img src="./assets/img/poubelle.png" alt="delete"></button>
+                            <button class="btn remove-product" data-removeid="${product_Id}"><img src="./assets/img/poubelle.png" alt="delete"></button>
                         </div>
                     </div>
                 </div>
@@ -78,13 +82,13 @@ function addItem(product_Id) {
         </div>
         </div>
         `
-}
+};
 //--Fin augmentation de la quantité
 
 //------------------Fonction calculer la somme pour chaque article
 
 
-function sumItems(product_Id, quantity_Id) {}
+function sumItems(product_Id, quantity_Id) {};
 
 
 //--Fin Somme d'un article
@@ -92,7 +96,7 @@ function sumItems(product_Id, quantity_Id) {}
 //------------------Fonction calculer la somme du panier
 
 
-function sumItemsTotal() {}
+function sumItemsTotal() {};
 
 //--Fin Somme du panier
 
@@ -101,7 +105,7 @@ function sumItemsTotal() {}
 
 function updateLocalStorage() {
     localStorage.setItem('visitor', JSON.stringify(productsBasket));
-}
+};
 //--Fin mise à jour du localStorage
 
 //------------------Fonction Appel du localStorage
@@ -109,7 +113,7 @@ function updateLocalStorage() {
 
 function getLocalStorage() {
     let productsBasket = localStorage.getItem('visitor') ? JSON.parse(localStorage.getItem('visitor')) : [];
-}
+};
 
 //--Fin appel du localStorage
 
@@ -124,29 +128,28 @@ function refreshButton(arrayName) {
 
         document.querySelector('.decrementBtn[data-productId=' + element.id + ']').addEventListener('click', (event) => {
             decrementValueItem(event.currentTarget.dataset.productid);
-            console.log("test bouton -")
-        })
+            console.log("test bouton -");
+        });
 
         document.querySelector('.incrementBtn[data-productId=' + element.id + ']').addEventListener('click', (event) => {
             incrementValueItem(event.currentTarget.dataset.productid);
-            console.log("test bouton +")
-        })
+            console.log("test bouton +");
+        });
 
         document.querySelector('button[data-productId=' + element.id + ']').addEventListener('click', (event) => {
             addToBasket(event.currentTarget.dataset.productid);
-            document.querySelector('.offcanvas-body').innerHTML += addItem(element.id)
-            // updateLocalStorage()
-
-        })
-    })
-}
+            document.querySelector('.offcanvas-body').innerHTML += addItem(element.id);
+            updateLocalStorage()
+        });
+    });
+};
 
 
 
 //------------------Fonction Fetch Initial et stockage dans une variable
 
 
-function fetchAndSaveIt() {}
+function fetchAndSaveIt() {};
 
 //--Fin Fetch Initial et stockage dans une variable
 
@@ -201,7 +204,7 @@ let createCards = (arrayItem) => {
 //------------------Fonction changement d'affichage en fonction de la catégorie 
 
 
-function changeDisplay(userChoice) {}
+function changeDisplay(userChoice) {};
 
 
 
@@ -214,9 +217,9 @@ let productIndex = null;
 function findIndex(dataProductId) {
     productsBasket.forEach((element, index) => {
         if (dataProductId == element.product_Id) {
-            productIndex = index
-        }
-    })
+            productIndex = index;
+        };
+    });
 };
 
 
@@ -228,21 +231,21 @@ function findIndex(dataProductId) {
 
 function addToBasket(dataProductId) {
     findIndex(dataProductId);
-    console.log(productIndex)
+    console.log(productIndex);
     if (productIndex == null) {
         productsBasket.push({
             'product_Id': dataProductId,
             'productQuantity': document.querySelector('input[data-productID=' + dataProductId + ']').value,
             'productPrice': document.querySelector('span[data-productID=' + dataProductId + ']').innerText,
             'product_img': document.querySelector('img[data-productID=' + dataProductId + ']').src,
-            'product-title': document.querySelector('h5[data-productID=' + dataProductId + ']').innerText
-        })
+            'product-title': document.querySelector('h5[data-productID=' + dataProductId + ']').innerText,
+        });
     } else {
         productsBasket[productIndex].productQuantity = parseInt(productsBasket[productIndex].productQuantity) + parseInt(document.querySelector('input[data-productID=' + dataProductId + ']').value);
 
-    }
-    console.log(productsBasket)
-}
+    };
+    console.log(productsBasket);
+};
 //--Fin ajout au panier
 
 //------------------Fonction Zoom sur image
@@ -251,13 +254,13 @@ function addToBasket(dataProductId) {
 function modalZoomImg(zoomBtn) {
 
 
-}
+};
 //--Fin Zoom sur image
 
 //------------------Fonction ouvrir le panier
 //Ouvre la modal du panier
 
-function openBasketModal(basketBtn) {}
+function openBasketModal(basketBtn) {};
 
 
 
@@ -266,9 +269,9 @@ function openBasketModal(basketBtn) {}
 
 function incrementValueItem(dataProductId) {
 
-    document.querySelector('input[data-productID=' + dataProductId + ']').value++
+    document.querySelector('input[data-productID=' + dataProductId + ']').value++;
 
-}
+};
 // Fin fonction achat rapide++
 // Fonction qui modifie le nombre d'objets pour un achat rapide --
 
@@ -277,6 +280,6 @@ function incrementValueItem(dataProductId) {
 function decrementValueItem(dataProductId) {
     document.querySelector('input[data-productID=' + dataProductId + ']').value == 1 ? alert('vous ne pouvez pas ajouter aucun objet au panier') : document.querySelector('input[data-productID=' + dataProductId + ']').value--;
 
-}
+};
 
 // Fin fonction achat rapide 
