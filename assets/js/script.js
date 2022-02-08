@@ -85,23 +85,36 @@ fetch("assets/js/ducks.json")
         let removeTotalProduct = document.querySelector('.removeTotalProduct');
         removeTotalProduct.addEventListener('click', () => {
             removeAllItem();
+            document.querySelector('.offcanvas-title').innerHTML = `${productsBasket.length} articles`;
+            sumItems()
+            document.querySelector('.priceTotaModal').innerHTML = sumItemsTotal()
         });
 
 
-        modalBtn.addEventListener('click', () => {
-
-            let prices = document.querySelectorAll('.priceQteModal')
-        });
         let removeProduct = document.querySelectorAll('.remove-product');
         console.log(removeProduct);
-        removeProduct.forEach(element => {
-            element.addEventListener('click', (event) => {
-                productIdRemove = event.currentTarget.dataset.removeid;
-                findIndex(productIdRemove);
-                productsBasket.splice(productIndex, 1);
-                localStorage.setItem('visitor', JSON.stringify(productsBasket));
-            });
+
+        modalBtn.addEventListener('click', () => {
+            let prices = document.querySelectorAll('.priceQteModal')
+
+            document.querySelector('.offcanvas-title').innerHTML = `${productsBasket.length} articles`;
+            sumItems()
+            document.querySelector('.priceTotaModal').innerHTML = sumItemsTotal()
+
+            removeProduct.forEach(element => {
+                element.addEventListener('click', (event) => {
+                    productIdRemove = event.currentTarget.dataset.removeid;
+                    findIndex(productIdRemove);
+                    productsBasket.splice(productIndex, 1);
+                    localStorage.setItem('visitor', JSON.stringify(productsBasket));
+                    document.querySelector('.offcanvas-body').innerHTML = '';
+
+                    if (productsBasket !== []) {
+                        productsBasket.forEach(element => {
+                            document.querySelector('.offcanvas-body').innerHTML += refreshBasketDisplay(element)
+                        });
+                    };
+                })
+            })
         });
-        
-        document.querySelector('.offcanvas-title').innerHTML = `${productsBasket.length} articles`;
-    });
+    })

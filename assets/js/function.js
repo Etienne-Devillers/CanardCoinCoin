@@ -7,7 +7,8 @@
 //------------------Fonction De supression d'un article
 
 
-function RemoveItem(product_Id) {}
+
+
 
 
 
@@ -27,7 +28,7 @@ function RemoveQuantityItem(product_Id) {}
 function removeAllItem() {
     document.querySelector('.offcanvas-body').innerHTML = '';
     productsBasket.splice(0, productsBasket.length);
-    localStorage.setItem('visitor',JSON.stringify(productsBasket));
+    localStorage.setItem('visitor', JSON.stringify(productsBasket));
 }
 
 
@@ -63,7 +64,7 @@ function refreshBasketDisplay(element) {
                     </div>
                     <div class="row rowPriceQte">
                         <div class="col colPriceQte">
-                            <p class="priceQteModal">9.99€</p>
+                            <p class="priceQteModal" data-productId="${element.product_Id}"></p>
                         </div>
                         <div class="col colBinCard">
                         <button class="btn remove-product" data-removeid="${element.product_Id}"><img src="./assets/img/poubelle.png" alt="delete"></button>
@@ -108,7 +109,7 @@ function addItem(product_Id) {
                     </div>
                     <div class="row rowPriceQte">
                         <div class="col colPriceQte">
-                            <p class="priceQteModal">total€</p>
+                            <p class="priceQteModal" data-productId="${product_Id}"></p>
                         </div>
                         <div class="col colBinCard">
                         <button class="btn remove-product" data-removeid="${product_Id}"><img src="./assets/img/poubelle.png" alt="delete"></button>
@@ -125,7 +126,11 @@ function addItem(product_Id) {
 //------------------Fonction calculer la somme pour chaque article
 
 
-function sumItems(product_Id, quantity_Id) {}
+function sumItems() {
+    productsBasket.forEach(element => {
+        document.querySelector(`.priceQteModal[data-productid=${element.product_Id}]`).innerHTML = `${element.productPrice * element.productQuantity}€`
+    });
+}
 
 
 //--Fin Somme d'un article
@@ -133,10 +138,13 @@ function sumItems(product_Id, quantity_Id) {}
 //------------------Fonction calculer la somme du panier
 
 
-function sumItemsTotal() {}
-
-//--Fin Somme du panier
-
+function sumItemsTotal() {
+    let sum = 0 //we need a variable because of the += ?
+    productsBasket.forEach(element => {
+        sum = sum + (element.productPrice * element.productQuantity)
+    });
+    return `${sum} €`
+}
 //------------------Fonction Mise à jour du localStorage
 
 
@@ -180,7 +188,7 @@ function refreshButton(arrayName) {
 
         })
     })
-    
+
 }
 
 
@@ -199,7 +207,7 @@ let createCards = (arrayItem) => {
 
     return `
         <div class="col">
-            <div class="card overflow-hidden">
+            <div class="card overflow-hidden ">
                 
                     <img class="class="card-img-top image"  src=" ${arrayItem.picture}" alt="${arrayItem.description}" data-productId="${arrayItem.id}">
                     
@@ -256,7 +264,7 @@ let productIndex = null;
 
 function findIndex(dataProductId) {
     productsBasket.forEach((element, index) => {
-        
+
         if (dataProductId == element.product_Id) {
             productIndex = index
         }
@@ -274,19 +282,19 @@ function addToBasket(dataProductId) {
     findIndex(dataProductId);
     console.log(productIndex)
     if (productIndex == null) {
-        
+
         productsBasket.push({
             'product_Id': dataProductId,
             'productQuantity': document.querySelector('input[data-productID=' + dataProductId + ']').value,
             'productPrice': document.querySelector('span[data-productID=' + dataProductId + ']').innerText,
             'product_img': document.querySelector('img[data-productID=' + dataProductId + ']').src,
             'productTitle': document.querySelector('h5[data-productID=' + dataProductId + ']').innerText
-        }) 
+        })
         document.querySelector('.offcanvas-body').innerHTML += addItem(dataProductId)
-        
+
     } else {
         productsBasket[productIndex].productQuantity = parseInt(productsBasket[productIndex].productQuantity) + parseInt(document.querySelector('input[data-productID=' + dataProductId + ']').value);
-        
+
     }
     return productIndex = null;
 }
