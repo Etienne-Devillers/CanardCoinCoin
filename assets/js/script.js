@@ -1,6 +1,14 @@
 // Initialisation  et récupération de la variable du panier. sauvegardé dans le localstorage
 let productsBasket = localStorage.getItem('visitor') ? JSON.parse(localStorage.getItem('visitor')) : [];
 
+if (productsBasket !== []) {
+    productsBasket.forEach(element => {
+        document.querySelector('.offcanvas-body').innerHTML += refreshBasketDisplay(element)
+    })
+}
+
+
+
 fetch("assets/js/ducks.json")
 
     .then(function (resp) {
@@ -58,9 +66,9 @@ fetch("assets/js/ducks.json")
             firstRow.innerHTML = '';
             ducksDataBase.professions.forEach(element => {
                 firstRow.innerHTML += createCards(element);
-            }); 
+            });
             refreshButton(ducksDataBase.professions);
-            
+
         });
 
         let sport = document.getElementById('sport');
@@ -71,12 +79,17 @@ fetch("assets/js/ducks.json")
             });
             refreshButton(ducksDataBase.sport);
         });
-        
-        let removeTotalProduct = document.querySelector('.removeTotalProduct');
-            removeTotalProduct.addEventListener('click', () => {
-                removeAllItem();
-            });
 
+        let removeTotalProduct = document.querySelector('.removeTotalProduct');
+        removeTotalProduct.addEventListener('click', () => {
+            removeAllItem();
+        });
+
+
+        modalBtn.addEventListener('click', () => {
+
+            let prices = document.querySelectorAll('.priceQteModal')
+        });
         let removeProduct = document.querySelectorAll('.remove-product');
         console.log(removeProduct);
         removeProduct.forEach(element => {
@@ -84,7 +97,9 @@ fetch("assets/js/ducks.json")
                 productIdRemove = event.currentTarget.dataset.removeid;
                 findIndex(productIdRemove);
                 productsBasket.splice(productIndex, 1);
-                localStorage.setItem('visitor',JSON.stringify(productsBasket));
+                localStorage.setItem('visitor', JSON.stringify(productsBasket));
             });
         });
+        
+        document.querySelector('.offcanvas-title').innerHTML = `${productsBasket.length} articles`;
     });
