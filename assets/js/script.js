@@ -9,6 +9,7 @@ if (productsBasket !== []) {
 
 
 
+
 fetch("assets/js/ducks.json")
 
     .then(function (resp) {
@@ -112,6 +113,7 @@ fetch("assets/js/ducks.json")
                     if (productsBasket !== []) {
                         productsBasket.forEach(element => {
                             document.querySelector('.offcanvas-body').innerHTML += refreshBasketDisplay(element)
+
                         });
                     };
                 })
