@@ -141,6 +141,10 @@ function refreshButton(arrayName) {
             document.querySelector('.offcanvas-body').innerHTML += addItem(element.id);
             updateLocalStorage()
         });
+
+        document.querySelector('.cartIcons').addEventListener('click', () => {
+            document.querySelector('.offcanvas-title').innerHTML = `${productsBasket.length} articles`;
+        });
     });
 };
 

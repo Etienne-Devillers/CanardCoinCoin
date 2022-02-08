@@ -81,7 +81,7 @@ fetch("assets/js/ducks.json")
         console.log(removeProduct);
         removeProduct.forEach(element => {
             element.addEventListener('click', (event) => {
-                productIdRemove = event.target.dataset.removeid;
+                productIdRemove = event.currentTarget.dataset.removeid;
                 findIndex(productIdRemove);
                 productsBasket.splice(productIndex, 1);
                 localStorage.setItem('visitor',JSON.stringify(productsBasket));
