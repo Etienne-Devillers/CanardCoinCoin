@@ -101,6 +101,17 @@ fetch("assets/js/ducks.json")
             sumItems()
             document.querySelector('.priceTotaModal').innerHTML = sumItemsTotal()
 
+            // afficher la quantité
+            productsBasket.forEach(element => {
+                document.querySelector(`.quantityInput[data-productid=${element.product_Id}]`).value = element.productQuantity
+
+
+            console.log(element.productQuantity)
+            console.log(document.querySelector(`.quantityInput[data-productid=${element.product_Id}]`).value)
+            });
+
+            
+
             removeProduct.forEach(element => {
                 element.addEventListener('click', (event) => {
                     productIdRemove = event.currentTarget.dataset.removeid;
